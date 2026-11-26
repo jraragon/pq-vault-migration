@@ -3,7 +3,7 @@
 Replication package of study P15 (Rodríguez-Aragón, Zato, Alaejos Herrero, Fernández-Díaz and Rodríguez-González): reference implementations of four
 key-hierarchy architectures on five client platforms, measurement harnesses, the raw
 measurements of the pre-registered campaign and the analysis scripts.
-Pre-registration: OSF, registration `f6ugk` (21 November 2026), frozen at tag `p15-prereg-v1.2`.
+Pre-registration: OSF, registration `p6ugk` (21 November 2026, https://doi.org/10.17605/OSF.IO/P6UGK), frozen at tag `p15-prereg-v1.2`.
 
 | Folder | Content |
 |---|---|
@@ -130,7 +130,7 @@ E3 sessions use the same runners with another operation: `OP=encap|keygen|decap|
 This repository is published as a single snapshot. Commit identifiers and tags
 cited in `prereg/` (for example `d364f6f`, `87ba518` or `p15-prereg-v1.2`) refer
 to the private development history. The state frozen before data collection is
-archived on OSF (https://osf.io/f6ugk) as `repository_at_freeze_v1.2.zip`,
+archived on OSF (https://osf.io/p6ugk) as `repository_at_freeze_v1.2.zip`,
 together with `freeze_manifest.txt`, which lists the SHA-256 of every frozen
 file. Changes made after the freeze are documented in `prereg/DEVIATIONS.md`.
 Pre-registration drafts earlier than the registered version 1.2 are not included.

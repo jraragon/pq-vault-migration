@@ -1,4 +1,4 @@
-# Deviations from the registered protocol (pre-registration v1.2, OSF f6ugk)
+# Deviations from the registered protocol (pre-registration v1.2, OSF p6ugk)
 
 Every deviation after the freeze is logged here with date, reason and the analyses it
 affects. The registered document is not edited.

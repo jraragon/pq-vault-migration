@@ -1,7 +1,7 @@
 {
   "title": "Replication package: the impact of key-hierarchy architecture on post-quantum migration costs in client-controlled encrypted storage",
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "creators": [
     {"name": "Rodríguez-Aragón, Jesús F.", "affiliation": "University of Salamanca; Universidad Internacional de La Rioja", "orcid": "0000-0001-7292-610X"},
     {"name": "Zato, Carolina", "affiliation": "University of Salamanca", "orcid": "0000-0003-3023-8258"},
@@ -9,10 +9,10 @@
     {"name": "Fernández-Díaz, Julia", "affiliation": "University of Oviedo", "orcid": "0009-0007-2419-2405"},
     {"name": "Rodríguez-González, Sara", "affiliation": "University of Salamanca", "orcid": "0000-0002-3081-5177"}
   ],
-  "description": "Reference implementations (C/OpenSSL, Java/Bouncy Castle, JavaScript/WebCrypto and @noble/post-quantum) of four key-hierarchy architectures for client-controlled encrypted storage, the measurement harnesses, the raw measurements of the pre-registered campaign (OSF registration f6ugk) and the analysis scripts.",
+  "description": "Reference implementations (C/OpenSSL, Java/Bouncy Castle, JavaScript/WebCrypto and @noble/post-quantum) of four key-hierarchy architectures for client-controlled encrypted storage, the measurement harnesses, the raw measurements of the pre-registered campaign (OSF registration p6ugk) and the analysis scripts.",
   "license": "MIT",
   "keywords": ["post-quantum cryptography", "ML-KEM", "crypto-agility", "client-side encryption", "key hierarchies", "pre-registration"],
   "related_identifiers": [
-    {"identifier": "10.17605/OSF.IO/F6UGK", "relation": "isSupplementTo", "scheme": "doi"}
+    {"identifier": "10.17605/OSF.IO/P6UGK", "relation": "isSupplementTo", "scheme": "doi"}
   ]
 }

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or data, please cite it as below."
 title: "Replication package: the impact of key-hierarchy architecture on post-quantum migration costs in client-controlled encrypted storage"
 type: software
-version: "1.0.0"
+version: "1.0.1"
 authors:
   - family-names: "Rodríguez-Aragón"
     given-names: "Jesús F."
