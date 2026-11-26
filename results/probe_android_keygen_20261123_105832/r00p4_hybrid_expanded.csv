@@ -1,0 +1,33 @@
+# p15_android bench
+# device=Xiaomi 2511FPC34G (klee)
+# soc=Mediatek MT6899
+# android=16 sdk=36 build=BP2A.250605.031.A3
+# security_patch=2026-08-01
+# bouncycastle=BouncyCastle Security Provider v1.84
+# app_debuggable=false
+# suite=hybrid format=expanded op=keygen iters=20 warmup=5 nf=7
+# run_id=r00p4_hybrid_expanded
+# thermal_before=battery_temp_c=29.0 battery_level=95 plugged=2 thermal_status=0 thermal_headroom=0.07666664
+# thermal_after=battery_temp_c=29.0 battery_level=95 plugged=2 thermal_status=0 thermal_headroom=0.07666664
+# time_source=System.nanoTime
+run_id,suite,format,op,iter,ns
+r00p4_hybrid_expanded,hybrid,expanded,keygen,0,646564846
+r00p4_hybrid_expanded,hybrid,expanded,keygen,1,294142461
+r00p4_hybrid_expanded,hybrid,expanded,keygen,2,1266780385
+r00p4_hybrid_expanded,hybrid,expanded,keygen,3,255319077
+r00p4_hybrid_expanded,hybrid,expanded,keygen,4,870320000
+r00p4_hybrid_expanded,hybrid,expanded,keygen,5,543350539
+r00p4_hybrid_expanded,hybrid,expanded,keygen,6,693069231
+r00p4_hybrid_expanded,hybrid,expanded,keygen,7,820344308
+r00p4_hybrid_expanded,hybrid,expanded,keygen,8,251918538
+r00p4_hybrid_expanded,hybrid,expanded,keygen,9,549454077
+r00p4_hybrid_expanded,hybrid,expanded,keygen,10,580531153
+r00p4_hybrid_expanded,hybrid,expanded,keygen,11,254187000
+r00p4_hybrid_expanded,hybrid,expanded,keygen,12,840632000
+r00p4_hybrid_expanded,hybrid,expanded,keygen,13,613484616
+r00p4_hybrid_expanded,hybrid,expanded,keygen,14,349457769
+r00p4_hybrid_expanded,hybrid,expanded,keygen,15,626119692
+r00p4_hybrid_expanded,hybrid,expanded,keygen,16,829667462
+r00p4_hybrid_expanded,hybrid,expanded,keygen,17,708439154
+r00p4_hybrid_expanded,hybrid,expanded,keygen,18,450223693
+r00p4_hybrid_expanded,hybrid,expanded,keygen,19,324284923

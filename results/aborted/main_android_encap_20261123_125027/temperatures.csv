@@ -1,0 +1,8 @@
+run_id,battery_temp_tenths_c,flag_hot
+r00p1_hybrid_seed,302,0
+r00p2_mlkem1024_seed,302,0
+r00p3_mlkem768_seed,305,0
+r00p4_rsa3072_na,305,0
+r00p5_mlkem768_expanded,305,0
+r00p6_mlkem1024_expanded,303,0
+r00p7_hybrid_expanded,303,0

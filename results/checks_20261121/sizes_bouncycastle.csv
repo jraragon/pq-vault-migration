@@ -1,0 +1,8 @@
+suite,format,credential_pkcs8,public_raw,kem_ct,access_package
+rsa3072,na,1795,398,384,426
+mlkem768,seed,86,1184,1088,1130
+mlkem768,expanded,2428,1184,1088,1130
+mlkem1024,seed,86,1568,1568,1610
+mlkem1024,expanded,3196,1568,1568,1610
+hybrid,seed,1853,1966,1952,1994
+hybrid,expanded,4958,1966,1952,1994

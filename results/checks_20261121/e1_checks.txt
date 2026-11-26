@@ -1,0 +1,60 @@
+        impl check                                                        item  measured predicted    ok                                                                               note
+     openssl  P1.1                        mlkem768 seed: package - RSA package       704       704  True                                                                                NaN
+     openssl  P1.1                    mlkem768 expanded: package - RSA package       704       704  True                                                                                NaN
+     openssl  P1.1                       mlkem1024 seed: package - RSA package      1184      1184  True                                                                                NaN
+     openssl  P1.1                   mlkem1024 expanded: package - RSA package      1184      1184  True                                                                                NaN
+     openssl  P1.1                          hybrid seed: package - RSA package      1568      1568  True                                                                                NaN
+     openssl  P1.1                      hybrid expanded: package - RSA package      1568      1568  True                                                                                NaN
+     openssl  P1.2                   mlkem768 seed credential < RSA credential        86    < 1793  True                                                                                NaN
+     openssl  P1.2               mlkem768 expanded credential > RSA credential      2428    > 1793  True                                                                                NaN
+     openssl  P1.2                  mlkem1024 seed credential < RSA credential        86    < 1793  True                                                                                NaN
+     openssl  P1.2              mlkem1024 expanded credential > RSA credential      3196    > 1793  True                                                                                NaN
+     openssl  P1.2 hybrid seed credential - RSA credential, same key (content)        64        64  True                                                                                NaN
+     openssl  P1.2  hybrid seed credential - RSA credential, same key (PKCS#8)        61        64 False expected 61: composite AlgorithmIdentifier is 3 bytes shorter than rsaEncryption's
+     openssl  P1.3                 A1 per-account bytes at rest, mlkem768 seed      4716      4672  True                               deviation +0.94 % (PKCS#8 wrapper of the credential)
+     openssl  P1.3             A1 per-account bytes at rest, mlkem768 expanded      9400      9344  True                               deviation +0.60 % (PKCS#8 wrapper of the credential)
+     openssl  P1.3                A1 per-account bytes at rest, mlkem1024 seed      6444      6400  True                               deviation +0.69 % (PKCS#8 wrapper of the credential)
+     openssl  P1.3            A1 per-account bytes at rest, mlkem1024 expanded     12664     12608  True                               deviation +0.44 % (PKCS#8 wrapper of the credential)
+     openssl  P1.3                   A1 per-account bytes at rest, hybrid seed     11544     11498  True                               deviation +0.40 % (PKCS#8 wrapper of the credential)
+     openssl  P1.3               A1 per-account bytes at rest, hybrid expanded     17752     17706  True                               deviation +0.26 % (PKCS#8 wrapper of the credential)
+     openssl  P1.3                    A1 per-account bytes at rest, rsa3072 na      5150      5098  True                               deviation +1.02 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.1                        mlkem768 seed: package - RSA package       704       704  True                                                                                NaN
+bouncycastle  P1.1                    mlkem768 expanded: package - RSA package       704       704  True                                                                                NaN
+bouncycastle  P1.1                       mlkem1024 seed: package - RSA package      1184      1184  True                                                                                NaN
+bouncycastle  P1.1                   mlkem1024 expanded: package - RSA package      1184      1184  True                                                                                NaN
+bouncycastle  P1.1                          hybrid seed: package - RSA package      1568      1568  True                                                                                NaN
+bouncycastle  P1.1                      hybrid expanded: package - RSA package      1568      1568  True                                                                                NaN
+bouncycastle  P1.2                   mlkem768 seed credential < RSA credential        86    < 1795  True                                                                                NaN
+bouncycastle  P1.2               mlkem768 expanded credential > RSA credential      2428    > 1795  True                                                                                NaN
+bouncycastle  P1.2                  mlkem1024 seed credential < RSA credential        86    < 1795  True                                                                                NaN
+bouncycastle  P1.2              mlkem1024 expanded credential > RSA credential      3196    > 1795  True                                                                                NaN
+bouncycastle  P1.2 hybrid seed credential - RSA credential, same key (content)        64        64  True                                                                                NaN
+bouncycastle  P1.2  hybrid seed credential - RSA credential, same key (PKCS#8)        61        64 False expected 61: composite AlgorithmIdentifier is 3 bytes shorter than rsaEncryption's
+bouncycastle  P1.3                 A1 per-account bytes at rest, mlkem768 seed      4716      4672  True                               deviation +0.94 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.3             A1 per-account bytes at rest, mlkem768 expanded      9400      9344  True                               deviation +0.60 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.3                A1 per-account bytes at rest, mlkem1024 seed      6444      6400  True                               deviation +0.69 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.3            A1 per-account bytes at rest, mlkem1024 expanded     12664     12608  True                               deviation +0.44 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.3                   A1 per-account bytes at rest, hybrid seed     11542     11498  True                               deviation +0.38 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.3               A1 per-account bytes at rest, hybrid expanded     17752     17706  True                               deviation +0.26 % (PKCS#8 wrapper of the credential)
+bouncycastle  P1.3                    A1 per-account bytes at rest, rsa3072 na      5154      5098  True                               deviation +1.10 % (PKCS#8 wrapper of the credential)
+       noble  P1.1                        mlkem768 seed: package - RSA package       704       704  True                                                                                NaN
+       noble  P1.1                    mlkem768 expanded: package - RSA package       704       704  True                                                                                NaN
+       noble  P1.1                       mlkem1024 seed: package - RSA package      1184      1184  True                                                                                NaN
+       noble  P1.1                   mlkem1024 expanded: package - RSA package      1184      1184  True                                                                                NaN
+       noble  P1.1                          hybrid seed: package - RSA package      1568      1568  True                                                                                NaN
+       noble  P1.1                      hybrid expanded: package - RSA package      1568      1568  True                                                                                NaN
+       noble  P1.2                   mlkem768 seed credential < RSA credential        86    < 1793  True                                                                                NaN
+       noble  P1.2               mlkem768 expanded credential > RSA credential      2428    > 1793  True                                                                                NaN
+       noble  P1.2                  mlkem1024 seed credential < RSA credential        86    < 1793  True                                                                                NaN
+       noble  P1.2              mlkem1024 expanded credential > RSA credential      3196    > 1793  True                                                                                NaN
+       noble  P1.2 hybrid seed credential - RSA credential, same key (content)        64        64  True                                                                                NaN
+       noble  P1.2  hybrid seed credential - RSA credential, same key (PKCS#8)        61        64 False expected 61: composite AlgorithmIdentifier is 3 bytes shorter than rsaEncryption's
+       noble  P1.3                 A1 per-account bytes at rest, mlkem768 seed      4716      4672  True                               deviation +0.94 % (PKCS#8 wrapper of the credential)
+       noble  P1.3             A1 per-account bytes at rest, mlkem768 expanded      9400      9344  True                               deviation +0.60 % (PKCS#8 wrapper of the credential)
+       noble  P1.3                A1 per-account bytes at rest, mlkem1024 seed      6444      6400  True                               deviation +0.69 % (PKCS#8 wrapper of the credential)
+       noble  P1.3            A1 per-account bytes at rest, mlkem1024 expanded     12664     12608  True                               deviation +0.44 % (PKCS#8 wrapper of the credential)
+       noble  P1.3                   A1 per-account bytes at rest, hybrid seed     11544     11498  True                               deviation +0.40 % (PKCS#8 wrapper of the credential)
+       noble  P1.3               A1 per-account bytes at rest, hybrid expanded     17754     17706  True                               deviation +0.27 % (PKCS#8 wrapper of the credential)
+       noble  P1.3                    A1 per-account bytes at rest, rsa3072 na      5150      5098  True                               deviation +1.02 % (PKCS#8 wrapper of the credential)
+
+54/57 checks as predicted

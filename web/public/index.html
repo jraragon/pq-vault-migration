@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P15Bench (browser)</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 16px; max-width: 900px; }
+  pre { font: 12px/1.35 ui-monospace, monospace; white-space: pre-wrap; background: #f4f4f4; padding: 10px; }
+  label { display: inline-block; margin: 4px 12px 4px 0; }
+  input { width: 7em; }
+  #status { font-weight: 600; margin: 12px 0; }
+  button { margin: 6px 8px 6px 0; padding: 6px 14px; }
+</style>
+</head>
+<body>
+<h1>P15Bench &mdash; browser client (A1)</h1>
+<div id="setup">
+  <button id="selftest">Run selftest</button>
+  <fieldset>
+    <legend>Timed session: E2 = open, E3 = keygen / encap / decap / load / rewrap (plus one warm-up block, discarded)</legend>
+    <label>Campaign <select id="kind"><option value="pilot">pilot</option><option value="main">main</option></select></label>
+    <label>Operation <select id="op"><option value="all">all (E2 + E3, 6 sessions)</option><option>open</option><option>keygen</option><option>encap</option><option>decap</option><option>load</option><option>rewrap</option></select></label>
+    <label>Label <input id="label" style="width:12em"></label>
+    <label>Blocks <input id="reps" type="number" value="10" min="1"></label>
+    <label>Ops per run <input id="iters" type="number" value="1000" min="10"></label>
+    <label>Cool-down (s) <input id="cooldown" type="number" value="2" min="0"></label>
+    <button id="start">Start</button>
+  </fieldset>
+</div>
+<div id="status"></div>
+<pre id="out"></pre>
+<script>
+// Start watchdog (DEV-006). A run page (?plan=...&i=k) must start its timed run within
+// 90 s (selftest and 10 s start delay included on the first page of a session). If the
+// script bundle failed to load or the page stalled before the run, reload the same page,
+// at most 5 times; the reload is recorded by the server in events.txt. It never fires
+// during a run: main.js sets __p15running just before the timed loop.
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (!q.has('plan')) return;
+  setTimeout(function () {
+    if (window.__p15running) return;
+    var r = +(q.get('r') || 0) + 1;
+    if (r > 5) { document.getElementById('status').textContent = 'STALLED: run page did not start after 5 reloads.'; return; }
+    q.set('r', r);
+    location.replace('?' + q.toString());
+  }, 90000);
+})();
+</script>
+<script src="p15bench.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+run_id,end_local
+r00p1_rsa3072_na,2026-11-24T07:27:37
+r00p2_mlkem1024_seed,2026-11-24T07:27:57
+r00p3_mlkem768_seed,2026-11-24T07:28:17
+r00p4_hybrid_seed,2026-11-24T07:29:04
+r00p5_hybrid_expanded,2026-11-24T07:29:52
+r00p6_mlkem768_expanded,2026-11-24T07:30:12
+r00p7_mlkem1024_expanded,2026-11-24T07:30:33
+r01p1_rsa3072_na,2026-11-24T07:31:17
+r01p2_mlkem1024_seed,2026-11-24T07:31:38
+r01p3_hybrid_expanded,2026-11-24T07:32:24
+r01p4_hybrid_seed,2026-11-24T07:33:07
+r01p5_mlkem768_expanded,2026-11-24T07:33:28
+r01p6_mlkem1024_expanded,2026-11-24T07:33:48
+r01p7_mlkem768_seed,2026-11-24T07:34:08

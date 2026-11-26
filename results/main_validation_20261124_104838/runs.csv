@@ -1,0 +1,480 @@
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v001_6251_A1b_mlkem1024,6251,A1b,mlkem1024,396,8,3,317,102,0,24,102,37632,1617200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v002_1625_A1b_mlkem1024,1625,A1b,mlkem1024,692,10,4,554,151,0,40,151,62720,2510100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v003_18200_A3_mlkem1024,18200,A3,mlkem1024,19,6,1,13,13,0,0,0,0,0,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v004_7255_A3_mlkem1024,7255,A3,mlkem1024,99,13,2,79,67,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v005_16298_A2_mlkem1024,16298,A2,mlkem1024,86,10,3,69,60,86,158,0,390848,10775500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v006_12980_A1b_mlkem1024,12980,A1b,mlkem1024,197,4,3,158,40,0,12,40,18816,747700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v007_4804_A2_mlkem1024,4804,A2,mlkem1024,80,4,1,64,44,80,145,0,360480,10074300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v008_6911_A1b_hybrid,6911,A1b,hybrid,67,6,3,54,51,0,18,51,35136,1655500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v009_7255_A1b_hybrid,7255,A1b,hybrid,99,13,2,79,67,0,26,67,50752,2322100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v010_13269_A2_mlkem1024,13269,A2,mlkem1024,173,8,3,138,93,173,314,0,780224,21754400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v011_13269_A3_hybrid,13269,A3,hybrid,173,8,3,138,93,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v012_12975_A2_mlkem1024,12975,A2,mlkem1024,747,6,2,598,105,747,1347,0,3355104,92858300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v013_1625_A3_hybrid,1625,A3,hybrid,692,10,4,554,151,0,0,0,0,400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v014_6911_A1_hybrid,6911,A1,hybrid,67,6,3,54,51,0,3,6,5856,331800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v015_11805_A3_hybrid,11805,A3,hybrid,152,7,4,122,48,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v016_2173_A2_hybrid,2173,A2,hybrid,29,5,3,23,24,29,55,0,218430,4329896100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v017_11876_A1b_hybrid,11876,A1b,hybrid,19,7,1,12,12,0,7,12,13664,630100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v018_73_A3_hybrid,73,A3,hybrid,293,7,1,234,93,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v019_19746_A1_hybrid,19746,A1,hybrid,76,3,1,61,35,0,1,3,1952,146900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v020_6341_A2_hybrid,6341,A2,hybrid,48,14,3,34,34,48,85,0,349760,6392686000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v021_18784_A2_mlkem1024,18784,A2,mlkem1024,25,6,2,19,19,25,46,0,113728,3295800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v022_18784_A3_hybrid,18784,A3,hybrid,25,6,2,19,19,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v023_19406_A2_mlkem1024,19406,A2,mlkem1024,236,10,1,189,98,236,426,0,1060672,32198000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v024_1625_A1b_hybrid,1625,A1b,hybrid,692,10,4,554,151,0,40,151,78080,3981000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v025_8821_A3_mlkem1024,8821,A3,mlkem1024,264,8,2,211,84,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v026_17783_A2_hybrid,17783,A2,hybrid,263,2,3,210,28,263,476,0,1936442,35303073500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v027_18784_A1b_mlkem1024,18784,A1b,mlkem1024,25,6,2,19,19,0,12,19,18816,567400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v028_7175_A1b_hybrid,7175,A1b,hybrid,974,9,2,779,151,0,18,151,35136,2417800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v029_2173_A1b_hybrid,2173,A1b,hybrid,29,5,3,23,24,0,15,24,29280,1267500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v030_7319_A1b_hybrid,7319,A1b,hybrid,103,7,3,82,65,0,21,65,40992,2100600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v031_7319_A3_hybrid,7319,A3,hybrid,103,7,3,82,65,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v032_8821_A1_hybrid,8821,A1,hybrid,264,8,2,211,84,0,2,8,3904,249700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v033_16823_A3_hybrid,16823,A3,hybrid,23,6,3,17,17,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v034_7255_A1_mlkem1024,7255,A1,mlkem1024,99,13,2,79,67,0,2,13,3136,191800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v035_16298_A2_hybrid,16298,A2,hybrid,86,10,3,69,60,86,158,0,637796,9849253900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v036_1625_A1_mlkem1024,1625,A1,mlkem1024,692,10,4,554,151,0,4,10,6272,249100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v037_19746_A2_mlkem1024,19746,A2,mlkem1024,76,3,1,61,35,76,138,0,342848,9549100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v038_16823_A2_mlkem1024,16823,A2,mlkem1024,23,6,3,17,17,23,43,0,105696,2974500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v039_12935_A1_mlkem1024,12935,A1,mlkem1024,121,5,2,97,46,0,2,5,3136,146100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v040_8821_A1b_hybrid,8821,A1b,hybrid,264,8,2,211,84,0,16,84,31232,1740300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v041_11805_A1_mlkem1024,11805,A1,mlkem1024,152,7,4,122,48,0,4,7,6272,214200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v042_16913_A3_hybrid,16913,A3,hybrid,153,7,4,122,67,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v043_8821_A3_hybrid,8821,A3,hybrid,264,8,2,211,84,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v044_6251_A3_hybrid,6251,A3,hybrid,396,8,3,317,102,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v045_14577_A1b_mlkem1024,14577,A1b,mlkem1024,67,5,1,54,43,0,5,43,7840,489600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v046_12980_A3_mlkem1024,12980,A3,mlkem1024,197,4,3,158,40,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v047_4804_A3_mlkem1024,4804,A3,mlkem1024,80,4,1,64,44,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v048_16823_A1b_mlkem1024,16823,A1b,mlkem1024,23,6,3,17,17,0,18,17,28224,737600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v049_6341_A3_mlkem1024,6341,A3,mlkem1024,48,14,3,34,34,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v050_16913_A3_mlkem1024,16913,A3,mlkem1024,153,7,4,122,67,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v051_14073_A1_mlkem1024,14073,A1,mlkem1024,240,6,2,192,57,0,2,6,3136,139000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v052_6251_A2_hybrid,6251,A2,hybrid,396,8,3,317,102,396,716,0,2914312,51191844600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v053_11876_A3_mlkem1024,11876,A3,mlkem1024,19,7,1,12,12,0,0,0,0,0,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v054_16298_A1_mlkem1024,16298,A1,mlkem1024,86,10,3,69,60,0,3,10,4704,207100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v055_6251_A1b_hybrid,6251,A1b,hybrid,396,8,3,317,102,0,24,102,46848,2527800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v056_14073_A3_hybrid,14073,A3,hybrid,240,6,2,192,57,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v057_19746_A1b_mlkem1024,19746,A1b,mlkem1024,76,3,1,61,35,0,3,35,4704,394100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v058_14073_A2_hybrid,14073,A2,hybrid,240,6,2,192,57,240,434,0,1766368,31596908700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v059_17838_A2_mlkem1024,17838,A2,mlkem1024,31,11,2,20,20,31,53,0,134688,3997500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v060_9065_A3_hybrid,9065,A3,hybrid,518,5,2,414,82,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v061_7255_A3_hybrid,7255,A3,hybrid,99,13,2,79,67,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v062_6341_A1b_hybrid,6341,A1b,hybrid,48,14,3,34,34,0,42,34,81984,3245400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v063_11876_A1_mlkem1024,11876,A1,mlkem1024,19,7,1,12,12,0,1,7,1568,108700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v064_12935_A2_mlkem1024,12935,A2,mlkem1024,121,5,2,97,46,121,220,0,546304,15081400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v065_19406_A1b_hybrid,19406,A1b,hybrid,236,10,1,189,98,0,10,98,19520,1431700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v066_12980_A2_mlkem1024,12980,A2,mlkem1024,197,4,3,158,40,197,358,0,889152,24587800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v067_4804_A1b_mlkem1024,4804,A1b,mlkem1024,80,4,1,64,44,0,4,44,6272,481700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v068_7319_A2_mlkem1024,7319,A2,mlkem1024,103,7,3,82,65,103,188,0,466176,13089300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v069_16913_A1b_mlkem1024,16913,A1b,mlkem1024,153,7,4,122,67,0,28,67,43904,1432900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v070_14073_A1b_hybrid,14073,A1b,hybrid,240,6,2,192,57,0,12,57,23424,1348300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v071_8821_A1_mlkem1024,8821,A1,mlkem1024,264,8,2,211,84,0,2,8,3136,150800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v072_13269_A1b_hybrid,13269,A1b,hybrid,173,8,3,138,93,0,24,93,46848,2323700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v073_14577_A2_hybrid,14577,A2,hybrid,67,5,1,54,43,67,122,0,494754,8702385900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v074_11930_A2_hybrid,11930,A2,hybrid,379,5,4,303,69,379,686,0,2790642,48863895700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v075_2173_A3_hybrid,2173,A3,hybrid,29,5,3,23,24,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v076_11805_A2_mlkem1024,11805,A2,mlkem1024,152,7,4,122,48,152,278,0,688832,19250600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v077_8821_A1b_mlkem1024,8821,A1b,mlkem1024,264,8,2,211,84,0,16,84,25088,1152600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v078_18784_A2_hybrid,18784,A2,hybrid,25,6,2,19,19,25,46,0,185542,2829115800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v079_7175_A2_mlkem1024,7175,A2,mlkem1024,974,9,2,779,151,974,1755,0,4372576,121401200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v080_12975_A1b_mlkem1024,12975,A1b,mlkem1024,747,6,2,598,105,0,12,105,18816,1214600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v081_19746_A2_hybrid,19746,A2,hybrid,76,3,1,61,35,76,138,0,560456,10891942900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v082_6341_A1_hybrid,6341,A1,hybrid,48,14,3,34,34,0,3,14,5856,384100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v083_6911_A3_hybrid,6911,A3,hybrid,67,6,3,54,51,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v084_11805_A1b_hybrid,11805,A1b,hybrid,152,7,4,122,48,0,28,48,54656,2333500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v085_7255_A2_mlkem1024,7255,A2,mlkem1024,99,13,2,79,67,99,180,0,446976,12200500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v086_14577_A2_mlkem1024,14577,A2,mlkem1024,67,5,1,54,43,67,122,0,302784,8686700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v087_73_A2_mlkem1024,73,A2,mlkem1024,293,7,1,234,93,293,528,0,1315456,36523700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v088_9065_A1_mlkem1024,9065,A1,mlkem1024,518,5,2,414,82,0,2,5,3136,130200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v089_7175_A3_hybrid,7175,A3,hybrid,974,9,2,779,151,0,0,0,0,400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v090_17838_A1_hybrid,17838,A1,hybrid,31,11,2,20,20,0,2,11,3904,271400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v091_11876_A1b_mlkem1024,11876,A1b,mlkem1024,19,7,1,12,12,0,7,12,10976,331400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v092_16913_A1b_hybrid,16913,A1b,hybrid,153,7,4,122,67,0,28,67,54656,2440200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v093_19406_A3_hybrid,19406,A3,hybrid,236,10,1,189,98,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v094_12980_A1b_hybrid,12980,A1b,hybrid,197,4,3,158,40,0,12,40,23424,1177700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v095_4804_A1_hybrid,4804,A1,hybrid,80,4,1,64,44,0,1,4,1952,137000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v096_17783_A1b_hybrid,17783,A1b,hybrid,263,2,3,210,28,0,6,28,11712,676100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v097_6341_A1_mlkem1024,6341,A1,mlkem1024,48,14,3,34,34,0,3,14,4704,238500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v098_6911_A1_mlkem1024,6911,A1,mlkem1024,67,6,3,54,51,0,3,6,4704,170200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v099_16823_A1_hybrid,16823,A1,hybrid,23,6,3,17,17,0,3,6,5856,306100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v100_19406_A1_mlkem1024,19406,A1,mlkem1024,236,10,1,189,98,0,1,10,1568,129400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v101_6251_A1_mlkem1024,6251,A1,mlkem1024,396,8,3,317,102,0,3,8,4704,199900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v102_7175_A1_mlkem1024,7175,A1,mlkem1024,974,9,2,779,151,0,2,9,3136,163900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v103_6251_A3_mlkem1024,6251,A3,mlkem1024,396,8,3,317,102,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v104_18200_A1_hybrid,18200,A1,hybrid,19,6,1,13,13,0,1,6,1952,152100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v105_11930_A2_mlkem1024,11930,A2,mlkem1024,379,5,4,303,69,379,686,0,1706304,46723400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v106_9065_A1b_mlkem1024,9065,A1b,mlkem1024,518,5,2,414,82,0,10,82,15680,993900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v107_1625_A3_mlkem1024,1625,A3,mlkem1024,692,10,4,554,151,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v108_13269_A1_hybrid,13269,A1,hybrid,173,8,3,138,93,0,3,8,5856,329600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v109_11805_A1_hybrid,11805,A1,hybrid,152,7,4,122,48,0,4,7,7808,395500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v110_11930_A1_mlkem1024,11930,A1,mlkem1024,379,5,4,303,69,0,4,5,6272,236200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v111_11930_A1b_hybrid,11930,A1b,hybrid,379,5,4,303,69,0,20,69,39040,1939100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v112_18200_A1b_hybrid,18200,A1b,hybrid,19,6,1,13,13,0,6,13,11712,559400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v113_13269_A1b_mlkem1024,13269,A1b,mlkem1024,173,8,3,138,93,0,24,93,37632,1443000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v114_73_A2_hybrid,73,A2,hybrid,293,7,1,234,93,293,528,0,2152846,38162033400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v115_12935_A1b_hybrid,12935,A1b,hybrid,121,5,2,97,46,0,10,46,19520,1100200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v116_14577_A1_mlkem1024,14577,A1,mlkem1024,67,5,1,54,43,0,1,5,1568,95100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v117_16913_A2_hybrid,16913,A2,hybrid,153,7,4,122,67,153,279,0,1130598,18089146600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v118_12935_A3_mlkem1024,12935,A3,mlkem1024,121,5,2,97,46,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v119_16823_A2_hybrid,16823,A2,hybrid,23,6,3,17,17,23,43,0,172026,2372168300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v120_14073_A2_mlkem1024,14073,A2,mlkem1024,240,6,2,192,57,240,434,0,1079872,29949500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v121_19746_A1_mlkem1024,19746,A1,mlkem1024,76,3,1,61,35,0,1,3,1568,88300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v122_1625_A2_hybrid,1625,A2,hybrid,692,10,4,554,151,692,1250,0,5090360,88363286400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v123_9065_A3_mlkem1024,9065,A3,mlkem1024,518,5,2,414,82,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v124_73_A1b_mlkem1024,73,A1b,mlkem1024,293,7,1,234,93,0,7,93,10976,931200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v125_16298_A1b_mlkem1024,16298,A1b,mlkem1024,86,10,3,69,60,0,30,60,47040,1420800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v126_2173_A3_mlkem1024,2173,A3,mlkem1024,29,5,3,23,24,0,0,0,0,0,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v127_18200_A1_mlkem1024,18200,A1,mlkem1024,19,6,1,13,13,0,1,6,1568,107700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v128_14577_A3_hybrid,14577,A3,hybrid,67,5,1,54,43,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v129_11876_A1_hybrid,11876,A1,hybrid,19,7,1,12,12,0,1,7,1952,169500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v130_12980_A2_hybrid,12980,A2,hybrid,197,4,3,158,40,197,358,0,1453326,23628841900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v131_7319_A1_mlkem1024,7319,A1,mlkem1024,103,7,3,82,65,0,3,7,4704,187900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v132_7319_A2_hybrid,7319,A2,hybrid,103,7,3,82,65,103,188,0,761466,13833158600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v133_17783_A2_mlkem1024,17783,A2,mlkem1024,263,2,3,210,28,263,476,0,1184000,32965900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v134_19406_A3_mlkem1024,19406,A3,mlkem1024,236,10,1,189,98,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v135_11805_A2_hybrid,11805,A2,hybrid,152,7,4,122,48,152,278,0,1124816,19650936600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v136_12980_A3_hybrid,12980,A3,hybrid,197,4,3,158,40,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v137_7255_A1b_mlkem1024,7255,A1b,mlkem1024,99,13,2,79,67,0,26,67,40768,1380200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v138_16298_A3_hybrid,16298,A3,hybrid,86,10,3,69,60,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v139_17838_A3_hybrid,17838,A3,hybrid,31,11,2,20,20,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v140_7255_A1_hybrid,7255,A1,hybrid,99,13,2,79,67,0,2,13,3904,298000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v141_9065_A2_mlkem1024,9065,A2,mlkem1024,518,5,2,414,82,518,934,0,2326464,64635000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v142_4804_A1_mlkem1024,4804,A1,mlkem1024,80,4,1,64,44,0,1,4,1568,112700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v143_6911_A2_hybrid,6911,A2,hybrid,67,6,3,54,51,67,124,0,498658,8726464800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v144_16823_A1_mlkem1024,16823,A1,mlkem1024,23,6,3,17,17,0,3,6,4704,183500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v145_12980_A1_mlkem1024,12980,A1,mlkem1024,197,4,3,158,40,0,3,4,4704,181000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v146_11805_A3_mlkem1024,11805,A3,mlkem1024,152,7,4,122,48,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v147_13269_A2_hybrid,13269,A2,hybrid,173,8,3,138,93,173,314,0,1275518,21410686700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v148_16298_A1b_hybrid,16298,A1b,hybrid,86,10,3,69,60,0,30,60,58560,2547000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v149_7319_A1b_mlkem1024,7319,A1b,mlkem1024,103,7,3,82,65,0,21,65,32928,1208500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v150_14073_A1_hybrid,14073,A1,hybrid,240,6,2,192,57,0,2,6,3904,252000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v151_2173_A1_mlkem1024,2173,A1,mlkem1024,29,5,3,23,24,0,3,5,4704,170300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v152_17783_A1_hybrid,17783,A1,hybrid,263,2,3,210,28,0,3,2,5856,290900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v153_7175_A1_hybrid,7175,A1,hybrid,974,9,2,779,151,0,2,9,3904,253400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v154_19406_A1b_mlkem1024,19406,A1b,mlkem1024,236,10,1,189,98,0,10,98,15680,1038000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v155_12935_A2_hybrid,12935,A2,hybrid,121,5,2,97,46,121,220,0,892870,15737573300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v156_7319_A3_mlkem1024,7319,A3,mlkem1024,103,7,3,82,65,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v157_14073_A3_mlkem1024,14073,A3,mlkem1024,240,6,2,192,57,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v158_16913_A1_hybrid,16913,A1,hybrid,153,7,4,122,67,0,4,7,7808,402700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v159_18200_A2_mlkem1024,18200,A2,mlkem1024,19,6,1,13,13,19,33,0,83360,2337400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v160_4804_A3_hybrid,4804,A3,hybrid,80,4,1,64,44,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v161_2173_A2_mlkem1024,2173,A2,mlkem1024,29,5,3,23,24,29,55,0,134496,3797400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v162_12975_A1_mlkem1024,12975,A1,mlkem1024,747,6,2,598,105,0,2,6,3136,140600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v163_17783_A3_hybrid,17783,A3,hybrid,263,2,3,210,28,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v164_19406_A2_hybrid,19406,A2,hybrid,236,10,1,189,98,236,426,0,1735432,31665467600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v165_9065_A2_hybrid,9065,A2,hybrid,518,5,2,414,82,518,934,0,3807108,65837513300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v166_12980_A1_hybrid,12980,A1,hybrid,197,4,3,158,40,0,3,4,5856,312600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v167_73_A1_hybrid,73,A1,hybrid,293,7,1,234,93,0,1,7,1952,165000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v168_16298_A3_mlkem1024,16298,A3,mlkem1024,86,10,3,69,60,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v169_18784_A3_mlkem1024,18784,A3,mlkem1024,25,6,2,19,19,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v170_73_A1_mlkem1024,73,A1,mlkem1024,293,7,1,234,93,0,1,7,1568,106900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v171_7175_A2_hybrid,7175,A2,hybrid,974,9,2,779,151,974,1755,0,7156180,124371091100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v172_7319_A1_hybrid,7319,A1,hybrid,103,7,3,82,65,0,3,7,5856,360800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v173_11876_A2_hybrid,11876,A2,hybrid,19,7,1,12,12,19,32,0,135234,2023058500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v174_17783_A1b_mlkem1024,17783,A1b,mlkem1024,263,2,3,210,28,0,6,28,9408,446500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v175_17838_A1_mlkem1024,17838,A1,mlkem1024,31,11,2,20,20,0,2,11,3136,188300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v176_18784_A1_mlkem1024,18784,A1,mlkem1024,25,6,2,19,19,0,2,6,3136,143300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v177_9065_A1_hybrid,9065,A1,hybrid,518,5,2,414,82,0,2,5,3904,243600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v178_11876_A2_mlkem1024,11876,A2,mlkem1024,19,7,1,12,12,19,32,0,81792,2325600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v179_13269_A3_mlkem1024,13269,A3,mlkem1024,173,8,3,138,93,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v180_12935_A1_hybrid,12935,A1,hybrid,121,5,2,97,46,0,2,5,3904,244900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v181_16823_A1b_hybrid,16823,A1b,hybrid,23,6,3,17,17,0,18,17,35136,1400600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v182_16298_A1_hybrid,16298,A1,hybrid,86,10,3,69,60,0,3,10,5856,337100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v183_6341_A1b_mlkem1024,6341,A1b,mlkem1024,48,14,3,34,34,0,42,34,65856,1578500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v184_19746_A1b_hybrid,19746,A1b,hybrid,76,3,1,61,35,0,3,35,5856,494800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v185_18784_A1_hybrid,18784,A1,hybrid,25,6,2,19,19,0,2,6,3904,254800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v186_11876_A3_hybrid,11876,A3,hybrid,19,7,1,12,12,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v187_19746_A3_mlkem1024,19746,A3,mlkem1024,76,3,1,61,35,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v188_4804_A1b_hybrid,4804,A1b,hybrid,80,4,1,64,44,0,4,44,7808,628200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v189_12935_A3_hybrid,12935,A3,hybrid,121,5,2,97,46,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v190_4804_A2_hybrid,4804,A2,hybrid,80,4,1,64,44,80,145,0,589440,9997858300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v191_16913_A1_mlkem1024,16913,A1,mlkem1024,153,7,4,122,67,0,4,7,6272,211600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v192_11805_A1b_mlkem1024,11805,A1b,mlkem1024,152,7,4,122,48,0,28,48,43904,1317700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v193_2173_A1b_mlkem1024,2173,A1b,mlkem1024,29,5,3,23,24,0,15,24,23520,693700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v194_7175_A3_mlkem1024,7175,A3,mlkem1024,974,9,2,779,151,0,0,0,0,400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v195_14577_A1_hybrid,14577,A1,hybrid,67,5,1,54,43,0,1,5,1952,146000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v196_6911_A1b_mlkem1024,6911,A1b,mlkem1024,67,6,3,54,51,0,18,51,28224,970000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v197_7255_A2_hybrid,7255,A2,hybrid,99,13,2,79,67,99,180,0,730530,12057241000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v198_13269_A1_mlkem1024,13269,A1,mlkem1024,173,8,3,138,93,0,3,8,4704,197400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v199_2173_A1_hybrid,2173,A1,hybrid,29,5,3,23,24,0,3,5,5856,299600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v200_11930_A3_hybrid,11930,A3,hybrid,379,5,4,303,69,0,0,0,0,200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v201_73_A3_mlkem1024,73,A3,mlkem1024,293,7,1,234,93,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v202_12975_A3_hybrid,12975,A3,hybrid,747,6,2,598,105,0,0,0,0,400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v203_1625_A1_hybrid,1625,A1,hybrid,692,10,4,554,151,0,4,10,7808,449200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v204_6341_A2_mlkem1024,6341,A2,mlkem1024,48,14,3,34,34,48,85,0,213152,5812900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v205_11930_A1_hybrid,11930,A1,hybrid,379,5,4,303,69,0,4,5,7808,385200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v206_6251_A2_mlkem1024,6251,A2,mlkem1024,396,8,3,317,102,396,716,0,1781632,48984900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v207_14577_A1b_hybrid,14577,A1b,hybrid,67,5,1,54,43,0,5,43,9760,701800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v208_12975_A2_hybrid,12975,A2,hybrid,747,6,2,598,105,747,1347,0,5490354,94929646600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v209_12935_A1b_mlkem1024,12935,A1b,mlkem1024,121,5,2,97,46,0,10,46,15680,703600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v210_18784_A1b_hybrid,18784,A1b,hybrid,25,6,2,19,19,0,12,19,23424,1027400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v211_14073_A1b_mlkem1024,14073,A1b,mlkem1024,240,6,2,192,57,0,12,57,18816,818400,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v212_16823_A3_mlkem1024,16823,A3,mlkem1024,23,6,3,17,17,0,0,0,0,0,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v213_6251_A1_hybrid,6251,A1,hybrid,396,8,3,317,102,0,3,8,5856,331000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v214_6911_A3_mlkem1024,6911,A3,mlkem1024,67,6,3,54,51,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v215_7175_A1b_mlkem1024,7175,A1b,mlkem1024,974,9,2,779,151,0,18,151,28224,1713600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v216_17838_A1b_mlkem1024,17838,A1b,mlkem1024,31,11,2,20,20,0,22,20,34496,846600,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v217_6911_A2_mlkem1024,6911,A2,mlkem1024,67,6,3,54,51,67,124,0,305920,8314100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v218_8821_A2_hybrid,8821,A2,hybrid,264,8,2,211,84,264,477,0,1942224,33826278500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v219_18200_A3_hybrid,18200,A3,hybrid,19,6,1,13,13,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v220_19746_A3_hybrid,19746,A3,hybrid,76,3,1,61,35,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v221_17838_A3_mlkem1024,17838,A3,mlkem1024,31,11,2,20,20,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v222_17783_A1_mlkem1024,17783,A1,mlkem1024,263,2,3,210,28,0,3,2,4704,152500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v223_12975_A3_mlkem1024,12975,A3,mlkem1024,747,6,2,598,105,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v224_17838_A1b_hybrid,17838,A1b,hybrid,31,11,2,20,20,0,22,20,42944,1632800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v225_11930_A3_mlkem1024,11930,A3,mlkem1024,379,5,4,303,69,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v226_1625_A2_mlkem1024,1625,A2,mlkem1024,692,10,4,554,151,692,1250,0,3111488,85664000,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v227_19406_A1_hybrid,19406,A1,hybrid,236,10,1,189,98,0,1,10,1952,192200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v228_12975_A1_hybrid,12975,A1,hybrid,747,6,2,598,105,0,2,6,3904,250700,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v229_6341_A3_hybrid,6341,A3,hybrid,48,14,3,34,34,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v230_9065_A1b_hybrid,9065,A1b,hybrid,518,5,2,414,82,0,10,82,19520,1334500,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v231_11930_A1b_mlkem1024,11930,A1b,mlkem1024,379,5,4,303,69,0,20,69,31360,1214300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v232_14577_A3_mlkem1024,14577,A3,mlkem1024,67,5,1,54,43,0,0,0,0,100,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v233_17783_A3_mlkem1024,17783,A3,mlkem1024,263,2,3,210,28,0,0,0,0,300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v234_18200_A2_hybrid,18200,A2,hybrid,19,6,1,13,13,19,33,0,137186,2047331300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v235_18200_A1b_mlkem1024,18200,A1b,mlkem1024,19,6,1,13,13,0,6,13,9408,310200,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v236_17838_A2_hybrid,17838,A2,hybrid,31,11,2,20,20,31,53,0,222186,4807422900,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v237_73_A1b_hybrid,73,A1b,hybrid,293,7,1,234,93,0,7,93,13664,1205300,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v238_16913_A2_mlkem1024,16913,A2,mlkem1024,153,7,4,122,67,153,279,0,692064,19058800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v239_8821_A2_mlkem1024,8821,A2,mlkem1024,264,8,2,211,84,264,477,0,1187232,32780800,logical CPU 2, efficiency class 1, high priority
+run_id,account,arch,suite,n_total,n_f,n_h,n_files,c,K_ops,E_ops,W_ops,bytes,ns,pin
+v240_12975_A1b_hybrid,12975,A1b,hybrid,747,6,2,598,105,0,12,105,23424,1668500,logical CPU 2, efficiency class 1, high priority

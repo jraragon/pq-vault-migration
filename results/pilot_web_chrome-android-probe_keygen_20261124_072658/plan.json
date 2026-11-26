@@ -1,0 +1,83 @@
+{
+ "id": "chrome-android-probe_keygen_20261124_072658",
+ "dir": "results/pilot_web_chrome-android-probe_keygen_20261124_072658",
+ "runs": [
+  {
+   "id": "r00p1_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r00p2_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r00p3_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r00p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r00p5_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r00p6_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r00p7_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p1_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r01p2_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r01p3_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r01p5_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p6_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p7_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  }
+ ],
+ "iters": 10,
+ "warmup": 50,
+ "nf": 7,
+ "op": "keygen",
+ "cooldown_s": 20,
+ "start_delay_s": 10,
+ "next": null
+}

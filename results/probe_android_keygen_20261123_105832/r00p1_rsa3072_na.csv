@@ -1,0 +1,33 @@
+# p15_android bench
+# device=Xiaomi 2511FPC34G (klee)
+# soc=Mediatek MT6899
+# android=16 sdk=36 build=BP2A.250605.031.A3
+# security_patch=2026-08-01
+# bouncycastle=BouncyCastle Security Provider v1.84
+# app_debuggable=false
+# suite=rsa3072 format=na op=keygen iters=20 warmup=5 nf=7
+# run_id=r00p1_rsa3072_na
+# thermal_before=battery_temp_c=27.6 battery_level=95 plugged=2 thermal_status=0 thermal_headroom=0.07666664
+# thermal_after=battery_temp_c=27.6 battery_level=95 plugged=2 thermal_status=0 thermal_headroom=0.083333336
+# time_source=System.nanoTime
+run_id,suite,format,op,iter,ns
+r00p1_rsa3072_na,rsa3072,na,keygen,0,381000308
+r00p1_rsa3072_na,rsa3072,na,keygen,1,321252077
+r00p1_rsa3072_na,rsa3072,na,keygen,2,304234154
+r00p1_rsa3072_na,rsa3072,na,keygen,3,446366769
+r00p1_rsa3072_na,rsa3072,na,keygen,4,493812077
+r00p1_rsa3072_na,rsa3072,na,keygen,5,888664308
+r00p1_rsa3072_na,rsa3072,na,keygen,6,534014769
+r00p1_rsa3072_na,rsa3072,na,keygen,7,928460077
+r00p1_rsa3072_na,rsa3072,na,keygen,8,450731077
+r00p1_rsa3072_na,rsa3072,na,keygen,9,402684923
+r00p1_rsa3072_na,rsa3072,na,keygen,10,923148308
+r00p1_rsa3072_na,rsa3072,na,keygen,11,1336794769
+r00p1_rsa3072_na,rsa3072,na,keygen,12,230603077
+r00p1_rsa3072_na,rsa3072,na,keygen,13,500409616
+r00p1_rsa3072_na,rsa3072,na,keygen,14,1166708000
+r00p1_rsa3072_na,rsa3072,na,keygen,15,1029189231
+r00p1_rsa3072_na,rsa3072,na,keygen,16,711361231
+r00p1_rsa3072_na,rsa3072,na,keygen,17,234099000
+r00p1_rsa3072_na,rsa3072,na,keygen,18,243950769
+r00p1_rsa3072_na,rsa3072,na,keygen,19,550547923

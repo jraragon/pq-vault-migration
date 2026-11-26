@@ -1,0 +1,10 @@
+date_utc=2026-11-21T23:10:11Z
+host=PORTATILCLASES
+uname=MINGW64_NT-10.0-26300 PORTATILCLASES 3.6.12-50c44b7c.x86_64 2026-10-30 16:46 UTC x86_64 Msys
+openssl=OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+gcc=gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+git_commit=5ffd891946807a86e263dfe624d23eaa7429d611
+git_dirty=0
+cpu_pin=2 reps=10 iters=1000 warmup=50 nf=7 op=keygen
+power_scheme=
+processes_running=0

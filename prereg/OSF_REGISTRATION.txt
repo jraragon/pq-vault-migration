@@ -1,0 +1,23 @@
+OSF registration of the pre-registration (Section 15 of the pre-registration)
+
+Title:            Architectural Trade-offs in Post-Quantum Migration of Client-Controlled
+                  Encrypted Storage: Pre-registration of a Multi-platform Measurement Study
+Registry:         OSF Registries, Open-Ended Registration
+Identifier:       f6ugk  (https://osf.io/f6ugk)
+Date registered:  2026-11-21 23:39 (Europe/Madrid), as shown by OSF
+Contributors:     Jesús F. Rodríguez-Aragón (administrator), Carolina Zato (administrator)
+License:          CC-BY 4.0
+Files registered: P15_preregistration_v1_2.pdf, freeze_manifest.txt,
+                  repository_at_freeze_v1.2.zip (git archive of tag p15-prereg-v1.2, commit d364f6f)
+Foreknowledge:    "Data does not yet exist" (main campaign); pilots disclosed in Section 1.1
+Status:           approved and archived; embargoed (checked 2026-11-21 23:47 Europe/Madrid)
+Embargo:          private until 2027-11-21 (can be ended early on publication)
+DOI:              not yet assigned (expected when the registration becomes public)
+
+Erratum to the registered document (v1.2)
+-----------------------------------------
+D-033 and Section 15 state that version 1.1 was superseded "without tag". In fact the tag
+p15-prereg-v1.1 was also created (pointing to commit c47515b, the v1.1 freeze manifest).
+Version 1.1 was never registered; the registered version is v1.2 (tag p15-prereg-v1.2,
+commit d364f6f). The error concerns repository bookkeeping only; design, hypotheses,
+thresholds, decision rules and scripts are unaffected.

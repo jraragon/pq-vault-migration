@@ -1,0 +1,17 @@
+{
+  "name": "p15-web",
+  "private": true,
+  "type": "module",
+  "description": "P15 browser client: architecture A1 with @noble/post-quantum (ML-KEM) and WebCrypto (RSA-OAEP, HKDF, AES-KW)",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --format=iife --target=es2022 --outfile=public/p15bench.js",
+    "test": "node src/node_test.js"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.4.0",
+    "@noble/post-quantum": "0.7.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

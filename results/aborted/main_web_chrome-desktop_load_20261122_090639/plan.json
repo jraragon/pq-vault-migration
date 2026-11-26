@@ -1,0 +1,398 @@
+{
+ "id": "chrome-desktop_load_20261122_090639",
+ "dir": "results/main_web_chrome-desktop_load_20261122_090639",
+ "runs": [
+  {
+   "id": "r00p1_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r00p2_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r00p3_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r00p4_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r00p5_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r00p6_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r00p7_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r01p1_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p2_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r01p3_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r01p4_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r01p5_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p6_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r01p7_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r02p1_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r02p2_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r02p3_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r02p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r02p5_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r02p6_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r02p7_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r03p1_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r03p2_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r03p3_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r03p4_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r03p5_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r03p6_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r03p7_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p1_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p2_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p3_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r04p4_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r04p5_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p6_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r04p7_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r05p1_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p2_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p3_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r05p4_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p5_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r05p6_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r05p7_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r06p1_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r06p2_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r06p3_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r06p4_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r06p5_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r06p6_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r06p7_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r07p1_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r07p2_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r07p3_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r07p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r07p5_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r07p6_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r07p7_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r08p1_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r08p2_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r08p3_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r08p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r08p5_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r08p6_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r08p7_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r09p1_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r09p2_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r09p3_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r09p4_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r09p5_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r09p6_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r09p7_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r10p1_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r10p2_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r10p3_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r10p4_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r10p5_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r10p6_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r10p7_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  }
+ ],
+ "iters": 1000,
+ "warmup": 50,
+ "nf": 7,
+ "op": "load",
+ "cooldown_s": 2,
+ "start_delay_s": 10,
+ "next": "chrome-desktop_rewrap_20261122_090639"
+}

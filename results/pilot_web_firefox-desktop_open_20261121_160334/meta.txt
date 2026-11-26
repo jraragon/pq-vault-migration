@@ -1,0 +1,10 @@
+date_utc=2026-11-21T15:03:34.339784+00:00
+git_commit=8a889cffdd9851b5632a8c6425bd0cb30ae862c5
+label=firefox-desktop
+reps=5 iters=1000 warmup=50 nf=7 op=open cooldown_s=2
+user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:160.0) Gecko/20100101 Firefox/160.0
+browser_full_version=na
+cross_origin_isolated=true
+timer_resolution_us=20.000
+hardware_concurrency=16
+noble_post_quantum=0.7.1 noble_hashes=2.4.0

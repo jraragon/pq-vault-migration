@@ -1,0 +1,9 @@
+date_utc=2026-11-20T09:48:02Z
+device=Xiaomi 2511FPC34G
+android=16 build=BP2A.250605.031.A3
+app_version=versionName=1.0
+compile_filter=speed (forced)
+airplane_mode=1
+stay_awake=15
+git_commit=4227093fbff363357383899946fcef58d3b613a1
+reps=5 iters=1000 warmup=50 nf=7 op=open cooldown_s=60

@@ -1,0 +1,20 @@
+  ok:   seed-format PKCS#8 matches RFC 9935 C.1.3.1
+  ok:   expanded key from the RFC seed matches C.1.3.2 prefix
+  ok:   ML-KEM-1024 decapsulation matches composite-draft vector
+  ok:   hybrid decapsulation and combiner match id-MLKEM1024-RSA3072-SHA3-256 vector
+  ok:   rsa3072   na       open account round trip (package 426 B, credential 1793 B)
+  ok:   rsa3072   na       wrong holder id is rejected
+  ok:   mlkem768  seed     open account round trip (package 1130 B, credential 86 B)
+  ok:   mlkem768  seed     wrong holder id is rejected
+  ok:   mlkem768  expanded open account round trip (package 1130 B, credential 2428 B)
+  ok:   mlkem768  expanded wrong holder id is rejected
+  ok:   mlkem1024 seed     open account round trip (package 1610 B, credential 86 B)
+  ok:   mlkem1024 seed     wrong holder id is rejected
+  ok:   mlkem1024 expanded open account round trip (package 1610 B, credential 3196 B)
+  ok:   mlkem1024 expanded wrong holder id is rejected
+  ok:   hybrid    seed     open account round trip (package 1994 B, credential 1854 B)
+  ok:   hybrid    seed     wrong holder id is rejected
+  ok:   hybrid    expanded open account round trip (package 1994 B, credential 4958 B)
+  ok:   hybrid    expanded wrong holder id is rejected
+
+SELFTEST PASSED (0 failures)

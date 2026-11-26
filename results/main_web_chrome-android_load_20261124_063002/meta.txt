@@ -1,0 +1,11 @@
+date_utc=2026-11-24T05:30:02.271368+00:00
+git_commit=b54578138ad0cd5a5599f0a207b552a09d899e68
+label=chrome-android
+kind=main
+reps=10 iters=1000 warmup=50 nf=7 op=load cooldown_s=20
+user_agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Mobile Safari/537.36
+browser_full_version=Not-A.Brand 99.0.0.0; Google Chrome 157.0.8103.78; Chromium 157.0.8103.78 | platform 16.0.0
+cross_origin_isolated=true
+timer_resolution_us=5.000
+hardware_concurrency=8
+noble_post_quantum=0.7.1 noble_hashes=2.4.0

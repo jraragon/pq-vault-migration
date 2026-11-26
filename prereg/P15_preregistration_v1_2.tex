@@ -1,0 +1,364 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{float}
+\setlength{\emergencystretch}{3em}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\open}[1]{\textcolor{orange!80!black}{\textbf{[OPEN:} #1\textbf{]}}}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Architectural Trade-offs in PQ Migration -- Pre-registration}
+\rhead{Frozen -- v1.2}
+\cfoot{\thepage/\pageref{LastPage}}
+\title{Architectural Trade-offs in Post-Quantum Migration of Client-Controlled Encrypted Storage\\[0.3em]\large Pre-registration of a Multi-platform Measurement Study}
+\author{Jesús F. Rodríguez-Aragón$^{1,2}$\qquad Carolina Zato$^{2,3}$\\[0.6em]
+\footnotesize $^1$School of Engineering and Technology--ESIT, Universidad Internacional de La Rioja (UNIR), Logroño, Spain\\
+\footnotesize $^2$Department of Computer Science and Automation, Faculty of Sciences, Universidad de Salamanca, Spain\\
+\footnotesize $^3$BISITE Research Group, Universidad de Salamanca, Spain\\
+\footnotesize Correspondence: jraragon@usal.es}
+\date{Version 1.2 -- 21 November 2026 -- \textsc{Frozen}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\textbf{Status.} Frozen pre-registration of the study, referred to by its internal code P15 in this document and in the project repository (Section~\ref{sec:freeze}), registered on OSF Registries (Section~\ref{sec:registration}). It follows the structure of the Paper~4 design freeze but none of its content. From the freeze onwards, any change of method is recorded as a deviation (Section~\ref{sec:registration}); hypotheses, thresholds and decision rules are not modified retrospectively. The Spanish start-up document (\emph{documento de arranque} v0.3) remains the record of phase F0; from F1 onwards this document is the source of truth.
+
+%=====================================================================
+\section{Purpose and working rule}
+%=====================================================================
+P15 measures, in bytes and milliseconds, the cost of migrating the key hierarchy of client-controlled encrypted storage from RSA-3072 to ML-KEM and to a standardised RSA-3072\,$\|$\,ML-KEM-1024 hybrid, on desktop, mobile and browser clients, and compares that cost across four hierarchy architectures that differ in where the asymmetric boundary sits.
+
+Iberbox is not used. All measurements run on a reference implementation written for this study. No claim will concern Proton Drive, Nextcloud or Cryptomator as products: their published designs are used only to define architectures, which are re-implemented with identical suites.
+
+Workflow rule: research $\rightarrow$ close decision $\rightarrow$ record it in the decision log (Section~\ref{sec:log}) $\rightarrow$ continue.
+
+\subsection{Prior knowledge from the pilots}\label{sec:prior}
+This registration follows pilot measurements. This section states, in one place, what was measured before the freeze, what it showed, what it changed and what it did not change, so that readers can judge how much each confirmatory result can still surprise. The details are in the decision log (D-014 to D-030).
+
+\textbf{What was measured.} Experiment E2 (opening an A1 account) on every platform, with 7 configurations of suite and key format and 1\,000 operations per run: native desktop, OpenSSL 4.1.0, 17 November 2026, 10 blocks; Android app, Bouncy Castle 1.84, 20 November, 5 blocks; Chrome 158 and Firefox 160.0.1 on the desktop and Chrome 157 on Android, 21 November, 5 blocks each. In addition, the authors' development machine (Linux builds of the same libraries) gave rough per-operation costs (encapsulation, key generation, key re-wrap), used once to anticipate H4.1 (D-025). Experiment E3, the source of the unit costs for H3.1 and H4.1, was not run on any device.
+
+\textbf{What the pilots showed.} Ratio of E2 medians ML-KEM-1024 (seed) / RSA-3072: 0.07 native, 0.11 Android, about 0.6 in Chrome, 0.41 in Firefox and 0.47 in Chrome on Android. Hybrid minus RSA-3072: between 0.15 and 2.2\,ms on every platform. Seed / expanded storage: 0.73 with OpenSSL, about 1.5 with Bouncy Castle and 1.5--1.7 with \texttt{@noble/post-quantum}. Between-run coefficient of variation of the run medians: at most 1.9\,\% on the native client and in Chrome on Android, up to 5.6\,\% on the Android app and up to 6.3--7.2\,\% in the desktop browsers (Chrome: blocks 3--5), and larger in the first two Chrome blocks, run just after a browser update; a within-run slowdown of RSA on the phone; battery temperature 29.2--34.5\,\textdegree C. Rough local costs suggested a median H4.1 speed-up of about 9--14$\times$ natively and about 1.6$\times$ in browsers.
+
+\textbf{What the pilots changed.} Protocol: 10 blocks per cell (D-014); 5 idle minutes after a browser starts and a discarded warm-up block (D-016, D-021); 20\,s cool-down for the mobile browser (D-018); the 40\,\textdegree C threshold kept (D-019). Analysis: a sensitivity analysis on the first 250 operations (D-017); H2.3 turned from a directional prediction into an estimation, because its direction depends on the library (D-015, D-020). Specification: the migration cost model of H3.1 and H4.1 was written after the rough local costs had been seen (D-025, D-030).
+
+\textbf{What the pilots did not change.} The directions and thresholds of H2.1, H2.2, H3.1 and H4.1 are those of version 0.2, committed before the first pilot (repository commit \texttt{0399c0a}, 17 November 2026, 13:33; first pilot 15:55), including the 16\,ms margin of H2.2. H4.1 keeps its 10$\times$ threshold although the rough costs anticipate its refutation in browsers. Later changes to the decision rules required stronger evidence for a verdict, so that a refutation needs evidence of the opposite and not only a missing confirmation (D-029), or made a comparison conservative (D-030); none made a hypothesis easier to support.
+
+\textbf{Which results can still surprise.} H2.1 on the native and Android clients, and H2.2 on every platform, are predictable from the pilots: their confirmatory value lies in measuring them under the registered protocol, with 10 blocks, on five platforms, not in their direction. H2.1 in the browsers is predictable in direction, with a smaller margin. H2.3 is an estimation. H3.1 and H4.1 rest on E3 unit costs that were not measured on any device; for H3.1 no estimate was made. The paper will state this classification. Pilot data are archived in the repository (\texttt{results/pilot\_*}), included in the registered package, and are not used as evidence for any hypothesis.
+
+%=====================================================================
+\section{Scientific gap and positioning}
+%=====================================================================
+\textbf{Gap statement (hedged; no ``first'' claim).}
+\begin{quote}
+No measurement has been found of the post-quantum cost of the key hierarchy of client-controlled encrypted storage --- per access package, per credential and per account, with sharing among several holders --- on desktop, mobile and browser clients, nor any comparison of how that cost depends on where the hierarchy places its asymmetric boundary.
+\end{quote}
+
+\subsection{Neighbouring work that does not eliminate the gap}
+\textbf{Lingala et al.\ (arXiv:2610.21457, Oct.\ 2026).} Closest neighbour. Per-object envelope encryption on a single-node MinIO S3 store, ML-KEM-768 against X25519, RSA-OAEP-4096 and two X25519 hybrids, Python client (liboqs via liboqs-python) and a GET-only Go reader, AWS Xeon and Graviton3 clients, up to 500 concurrent workers, pre-registered TOST at $\pm5\,\%$ on throughput. Results: throughput loss only at or near client CPU saturation (4.0--4.9\,\%), traced mostly to the library binding; 1\,056 extra bytes of ciphertext per object. Their own limitations section states that the study has no ML-KEM-1024, no RSA-3072, a single recipient per object (their argument about key commitment ``does not extend to several recipients''), no key hierarchy, and no browser or mobile client. P15 differs in unit of analysis (package, credential, account), sharing, hierarchy architecture, client platforms, security level (category~5, CNSA~2.0) and endpoint (user-perceived latency on account opening, not server throughput under concurrency). P15 adopts their methodological choices where they transfer (Section~\ref{sec:analysis}) and reports results in a form that allows comparison at the ML-KEM-768 level.
+
+\textbf{Rodríguez-Aragón, Zato, Rodríguez-González (JCP 2026, 6:197).} Formal locality result and synthetic simulation in abstract units; excludes the storage overhead of hybrid credentials (\S7.2). P15 measures the constants and tests whether the conclusions survive (RQ4).
+
+\textbf{Hofmann and Truong (CCS 2024); Backendal et al.\ (CRYPTO 2024); Janneck and Riepel (EUROCRYPT 2026).} Security analyses and formal models of E2EE cloud storage hierarchies; no cost of suite migration.
+
+\textbf{Junaid (ePrint 2026/1689); Prikutse et al.\ (2026).} Design-side hybrid post-quantum storage architectures; no hierarchy-level or cross-platform cost comparison.
+
+%=====================================================================
+\section{Research framing}
+%=====================================================================
+\subsection{Research questions}
+\begin{description}
+\item[RQ1 -- Size.] What storage and bandwidth overhead do ML-KEM and hybrid access packages and credentials introduce against RSA-3072, per package, per holder and per account, and how does it depend on the stored private-key format (seed vs.\ expanded)?
+\item[RQ2 -- Time.] What latency do encapsulation, decapsulation, key expansion from seed and package processing add on representative clients, in particular on the first opening of an account?
+\item[RQ3 -- Architecture.] How does the total cost of migrating to a post-quantum suite vary with the position of the asymmetric boundary (account root; root of each shared folder; every node; none)?
+\item[RQ4 -- Population.] Replacing abstract units by measured costs on the published JCP population, do the conclusions of JCP hold, including the hybrid case?
+\end{description}
+
+\subsection{Pre-registered predictions}\label{sec:predictions}
+Predictions P1.x are derived analytically, before any measurement, by \texttt{p15\_\allowbreak{}modelo\_\allowbreak{}bytes.py} (project file, run with NumPy 2.5.3) from the sizes of FIPS~203, RFC~9935 and draft-ietf-lamps-pq-composite-kem-23 applied to the published JCP population (seed 42, D-024; file fraction $\varphi=0.8$; A1b with every top-level folder shared with all holders). They count only suite-dependent bytes.
+
+\begin{table}[H]
+\centering\small
+\caption{Pre-registered analytic predictions (median per account, suite-dependent bytes, change against RSA-3072; migration totals over the 20\,000-account population). Asym.\ ops: key generations plus encapsulations of suite-dependent keys; holders' own key pairs are counted in bytes and not in operations (Table~\ref{tab:accounting}).}
+\label{tab:pred}
+\begin{tabularx}{\textwidth}{l l r r r X}
+\toprule
+\textbf{Arch.} & \textbf{Suite (seed)} & \textbf{$\Delta$ at rest} & \textbf{Migration} & \textbf{Asym.\ ops} & \textbf{Note}\\
+\midrule
+A1 & ML-KEM-768 & $-0.4$ KiB & 97 MiB & 43\,741 & smaller than RSA\\
+A1 & ML-KEM-1024 & $+1.3$ KiB & 134 MiB & 43\,741 & \\
+A1 & Hybrid & $+6.2$ KiB & 240 MiB & 43\,741 & \\
+A1b & ML-KEM-1024 & $+13.4$ KiB & 524 MiB & 304\,956 & $7.0\times$ A1 ops\\
+A2 & ML-KEM-1024 & $+234.7$ KiB & 31.5 GiB & 21\,205\,960 & $485\times$ A1 ops\\
+A2 & Hybrid & $+657.2$ KiB & 51.7 GiB & 21\,205\,960 & \\
+A3 & any & 0 & 0 & 0 & no public-key sharing\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{description}
+\item[P1.1] Per access package, the suite-dependent increase over RSA-3072 is exactly $+704$ (ML-KEM-768), $+1\,184$ (ML-KEM-1024) and $+1\,568$ bytes (hybrid); measured packages exceed these by a constant encoding overhead that does not depend on the suite.
+\item[P1.2] With seed storage, the private credential of ML-KEM is smaller than that of RSA-3072 and the hybrid credential exceeds the RSA-3072 credential of the same key by exactly 64 bytes (the seed); with expanded storage the order reverses.
+\item[P1.3] Measured per-account values (Table~\ref{tab:pred}) deviate from the analytic values by less than 10\,\% after the constant encoding overhead of P1.1 is accounted for.
+\item[H2.1] On every platform, opening an A1 account (E2) with an ML-KEM-1024 credential stored as a seed, which includes loading the credential, expanding the seed and decapsulating, is faster than opening it with RSA-3072 (direction based on Lingala et al., where RSA-4096 decryption took 32$\times$ ML-KEM-768 decapsulation; endpoint made explicit in D-027).
+\item[H2.2] On every platform, opening an A1 account with the hybrid suite, its credential stored in the seed form that the composite draft defines (D-021), is non-inferior to RSA-3072 within an absolute margin $\delta_{\mathrm{abs}}$ (Section~\ref{sec:analysis}).
+\item[H2.3] Estimation, not a directional test (revised twice, D-015 and D-020): the ratio of E2 latency with the ML-KEM credential stored as a seed to latency with the expanded format is estimated per platform with a 95\,\% confidence interval. The pilots showed that its direction depends on the implementation (OpenSSL: seed faster, because importing an expanded key triggers a pairwise consistency test; Bouncy Castle and \texttt{@noble/\allowbreak{}post-quantum}: seed 1.5--1.7$\times$ slower, because expansion is done in software and no test runs on import). A directional prediction made after seeing the pilots would carry no confirmatory weight, so none is made.
+\item[H3.1] Migration time per account (cost model with measured unit costs, Section~\ref{sec:population}) orders the architectures A3 $<$ A1 $<$ A1b $<$ A2 for every post-quantum suite, and the median per-account ratio A2/A1 of migration time is at least 10. A3, which has no public-key sharing, is a lower reference and not an alternative: its place in the order says nothing about operational superiority.
+\item[H4.1] With measured costs (cost model in Section~\ref{sec:population}), on every platform, the median per-account speed-up of crypto-agile migration over naive global re-encryption in A1 is at least $10\times$ for every suite (JCP: $15.3\times$ in abstract units; D-024, D-025).
+\end{description}
+
+\subsection{Refutation criteria}\label{sec:refutation}
+Every hypothesis has three outcomes: supported, refuted or inconclusive (D-029). Failing to show a hypothesis is not the same as showing its opposite, so a refutation requires the interval to lie wholly on the wrong side. H2.1, per platform: supported if the one-sided test rejects after Holm correction; refuted if the 90\,\% interval of the paired latency ratio (ML-KEM/RSA) lies wholly above 1. H2.2, per platform: supported if non-inferiority is shown at $\delta_{\mathrm{abs}}$ after Holm correction; refuted if inferiority is shown, that is, the 90\,\% interval of the paired difference lies wholly above $\delta_{\mathrm{abs}}$. H3.1, per platform and suite: the order is supported if the 90\,\% intervals of the median ratios A1b/A1 and A2/A1b both lie wholly above 1 and refuted if either lies wholly below 1; the threshold is supported if the lower 90\,\% bound of the median A2/A1 ratio is at least 10 and refuted if the upper bound is below 10; H3.1 is supported if both parts are and refuted if either is. H4.1, per platform and suite: supported if the lower 90\,\% bound of the median speed-up is at least 10, refuted if the upper bound is below 10. In every case, any other result is inconclusive. P1.x are deterministic checks: a deviation is reported and explained, not tested.
+
+%=====================================================================
+\section{Factors, levels and endpoints}
+%=====================================================================
+\begin{table}[H]
+\centering\small
+\caption{Factors and levels.}
+\begin{tabularx}{\textwidth}{l L}
+\toprule
+\textbf{Factor} & \textbf{Levels}\\
+\midrule
+Architecture & A1 account root (JCP); A1b root of each shared top-level folder (Nextcloud E2EE 2.0 model); A2 every node (Proton Drive model); A3 symmetric vault (Cryptomator password vault model)\\
+Suite & RSA-3072 OAEP (SHA-256, MGF1-SHA-256, empty label); ML-KEM-768; ML-KEM-1024; \texttt{id-MLKEM1024-\allowbreak RSA3072-SHA3-256} (composite draft -23)\\
+Private-key format & seed (64 B, RFC 9935 \texttt{seed}); expanded (RFC 9935 \texttt{expandedKey}). ML-KEM and hybrid only\\
+Platform & see Section~\ref{sec:platforms}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Endpoints.}
+\begin{itemize}
+\item E1 (RQ1): bytes per access package, per credential (public and stored private) and per account, measured on serialised artefacts.
+\item E2 (RQ2, primary latency endpoint): wall-clock time to open an A1 account from cold credentials: load credential, expand seed if applicable, decapsulate the holder's package, unwrap the root's children (AES-KW).
+\item E3 (RQ2, secondary): per-operation latency of key generation, encapsulation, decapsulation, seed expansion and key re-wrap (AES-256-KW, the symmetric unit of migration).
+\item E4 (RQ3): migration time and bytes rewritten per account, and number of asymmetric operations.
+\item E5 (RQ4): per-account speed-up of agile over naive migration with measured unit costs.
+\end{itemize}
+Latency is reported as median and 95th/99th percentiles within each run; inference uses the run median (Section~\ref{sec:analysis}).
+
+%=====================================================================
+\section{Platforms, devices and libraries}\label{sec:platforms}
+%=====================================================================
+\begin{table}[H]
+\centering\small
+\caption{Measurement platforms (devices fixed on 16 November 2026).}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}p{5.4cm} L}
+\toprule
+\textbf{Platform} & \textbf{Device} & \textbf{Implementation}\\
+\midrule
+Native desktop & ASUS Zenbook 14 UX3402VA, Intel Core i5-1340P (4P+8E cores), 16 GB, Windows 11 Home 26H2 (build 26300.9974); pinned to logical CPU 2 (efficiency class 1, P-core) & OpenSSL 4.1.0 via MSYS2 UCRT64, GCC 16.2.0 (RSA-OAEP, ML-KEM, SHA3, AES-KW in one library); control: liboqs / mlkem-native\\
+Browser desktop & same laptop; Google Chrome 158.0.8127.37 and Firefox 160.0.1 (64-bit), versions at the pilot (21 November 2026) & \texttt{@noble/\allowbreak{}post-quantum} 0.7.1 for ML-KEM, WebCrypto for RSA-OAEP and AES-KW, \texttt{@noble/\allowbreak{}hashes} for SHA3-256; exploratory: native WebCrypto ML-KEM where enabled\\
+Android & POCO X8 Pro (model 2511FPC34G), MediaTek Dimensity 8500-Ultra (reported by the OS as MT6899), 8 GB, Android 16, HyperOS 3.0.304.0, security patch 2026-08-01 & Bouncy Castle Java 1.84 lightweight API; control: same C library as desktop built with the NDK\\
+Browser mobile & same phone; Chrome for Android 157.0.8103.78, version at the pilot & as browser desktop (\texttt{@noble/\allowbreak{}hashes} 2.4.0)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Native desktop measurements run on Windows directly (decision D-008); WSL is excluded because it adds a virtualisation layer. No device is updated between the first and last measurement run; versions are recorded in every run record (browsers: full version from User-Agent Client Hints where available). If a browser updates itself between the pilot and F3, the F3 version is recorded and the change is logged as a deviation.
+
+\textbf{Binding rule.} Every cryptographic operation is reached through at most one call into the library per operation, with long-lived handles. Stored credentials are always loaded through the library's PKCS\#8 decoder, also for the ML-KEM component of the hybrid, so that the library's default import checks apply identically to every suite (D-013). Lingala et al.\ showed that a binding making four foreign calls per decapsulation produced their whole client-bound deficit; P15 avoids that artefact by construction and verifies it in the pilot.
+
+%=====================================================================
+\section{Experimental unit and protocol}\label{sec:protocol}
+%=====================================================================
+\begin{itemize}
+\item \textbf{Unit.} A run: a freshly started process (or freshly loaded page / app activity) executing one configuration (architecture, suite, format, platform, endpoint) for a fixed number of operations. Operations inside a run are not independent replicates.
+\item \textbf{Blocking.} Runs are organised in randomised complete blocks: one repetition contains every suite (and format) of a cell once, in shuffled order; suites are compared only within a repetition.
+\item \textbf{Warm-up.} Each run performs 50 untimed operations of the timed kind before 1\,000 timed operations.
+\item \textbf{Desktop controls.} Mains power; ``best performance'' power mode; process affinity pinned to one P-core; background applications closed; network disconnected during runs.
+\item \textbf{Browser controls.} Each run is a fresh page load served by a local server bound to 127.0.0.1 with cross-origin isolation headers (COOP/COEP), which gives \texttt{performance.now()} its finest resolution (measured: 5\,\textmu s in Chrome, 20\,\textmu s in Firefox; the fastest median operation lasts more than 400\,\textmu s); results are posted to the server. One tab, in the foreground; no other application open. The browser is left idle for 5 minutes after it starts, and one extra warm-up block precedes the measured blocks (D-016). The phone reaches the laptop's server over USB (\texttt{adb reverse}).
+\item \textbf{Mobile controls.} Airplane mode; battery $\geq 80\,\%$ and charging; screen kept on while charging; app or page in the foreground. Native app: release build, ahead-of-time compiled (\texttt{cmd package compile -m speed}), each run a fresh activity started over \texttt{adb}, 60\,s cool-down between runs, battery temperature and thermal status recorded before and after every run. Mobile browser: 20\,s cool-down between runs (D-018); battery temperature logged from the host over \texttt{adb} throughout the session.
+\item \textbf{Thermal and stall rule (blind to suite).} A mobile run is flagged if its starting battery temperature exceeds 40\,\textdegree C or if its median latency exceeds 1.5 times the median of its own cell. The primary analysis uses all runs; excluding flagged runs is a sensitivity analysis. Threshold confirmed after the pilots (D-019).
+\item \textbf{Warm-up block.} On every platform, block 00 runs every configuration once before the measured blocks and is discarded by the analysis (D-021).
+\item \textbf{Repetitions.} 10 blocks per cell (D-014). The native pilot (17 November 2026; 10 blocks $\times$ 7 configurations $\times$ 1\,000 operations) gave a between-run coefficient of variation of 0.1--1.7\,\% and a standard deviation of the paired hybrid$-$RSA difference of 0.034\,ms; the power calculation ($\alpha = 0.05/10$, power 0.8) requires fewer than 10 blocks for every primary test, so the pre-registered minimum applies. The calculation is repeated with the first block of each other platform; if it requires more than 10, that platform uses the larger number, fixed before its remaining runs. No optional stopping.
+\item \textbf{Correctness.} Every implementation passes, through its own PKCS\#8 loading path, the FIPS~203 ACVP vectors for ML-KEM-768 and ML-KEM-1024 (key generation from seed, decapsulation), the RFC~9935 Appendix~C keys and the composite draft's vectors for \texttt{id-MLKEM1024-RSA3072-SHA3-256}; accounts created by each implementation are opened by every other (D-021, D-023). The client selftest, which includes the RFC~9935 and composite-draft checks, runs at the start of every timed session and aborts it on failure.
+\end{itemize}
+
+%=====================================================================
+\section{Statistical analysis}\label{sec:analysis}
+%=====================================================================
+\begin{itemize}
+\item For a cell and two suites $a,b$, repetition $i$ gives the paired log ratio $d_i = \log(x_{a,i}/x_{b,i})$ of run medians.
+\item \textbf{H2.1:} one-sided paired $t$-test on $d$ (ML-KEM-1024 vs.\ RSA-3072), per platform.
+\item \textbf{H2.2:} non-inferiority of the hybrid against RSA-3072 on E2 with an absolute margin $\delta_{\mathrm{abs}} = 16$\,ms on the paired difference of run medians, one-sided $\alpha = 0.05$. Rationale: an operational threshold of practical relevance, one display frame at 60\,Hz (16.7\,ms); it is not offered as a universal perceptual limit. Three outcomes as in Section~\ref{sec:refutation}. A margin of 50\,ms was considered and rejected (D-010) because the expected differences are of the order of milliseconds and such a margin would make the test uninformative. Sensitivity is reported at 5\,ms and 50\,ms.
+\item \textbf{Relative equivalence (comparability).} For every pair of suites on E2 we also report TOST with bounds $[\log 0.95, \log 1.05]$, as Lingala et al., with sensitivity at $\pm2\,\%$ and $\pm10\,\%$. This is reported, not used for a confirmatory claim, because primitive costs differ by an order of magnitude between suites and a relative margin is not meaningful at that level.
+\item \textbf{Primary family and multiplicity.} H2.1 and H2.2 on each of the five platform levels (10 tests); Holm correction over the family. H3.1 and H4.1 use 90\,\% percentile-bootstrap intervals (20\,000 resamples) of the median per-account ratio over the population and are not corrected; the bootstrap resamples the measured blocks of each unit cost (estimate: mean of run medians over blocks), while the published population is a fixed workload and is not resampled (D-025).
+\item \textbf{Implementation.} \texttt{analysis/\allowbreak{}primary\_\allowbreak{}analysis.py}, tested on simulated data with known truth (\texttt{analysis/\allowbreak{}test\_\allowbreak{}primary\_\allowbreak{}analysis.py}). Each H2.1 and H2.2 test uses the one-sided $t$ distribution with $n-1$ degrees of freedom on the paired block values; H2.1 compares ML-KEM-1024 (seed) with RSA-3072 and H2.2 the hybrid (seed) with RSA-3072. Flagged runs (thermal and stall rule) and run medians of the first 250 timed operations are sensitivity analyses.
+\item \textbf{Population and size analyses.} \texttt{analysis/\allowbreak{}population\_\allowbreak{}analysis.py} (H3.1, H4.1) and \texttt{analysis/\allowbreak{}e1\_\allowbreak{}sizes.py} (P1.x), tested on simulated data with known truth (\texttt{analysis/\allowbreak{}test\_\allowbreak{}population\_\allowbreak{}analysis.py}).
+\item \textbf{Robustness.} Every primary verdict is recomputed with a percentile bootstrap of the mean log ratio; order effects are checked by regressing log latency on suite, repetition and position in block. H3.1 and H4.1 are recomputed with the holders' key generation added to every migration cost ($n_h K_s$; D-027).
+\item \textbf{Exploratory.} Everything not listed above, including ML-KEM-768 comparisons other than in Table~\ref{tab:pred}, native WebCrypto ML-KEM, and the NDK control on Android, is exploratory and reported with unadjusted intervals.
+\end{itemize}
+
+%=====================================================================
+\section{Population and architecture projection}\label{sec:population}
+%=====================================================================
+The JCP population is the one published in JCP (Section~7.4, Eqs.~51--53): NumPy \texttt{default\_\allowbreak{}rng(seed=42)}, $N = 20\,000$ accounts, $n_{\mathrm{total}} = \mathrm{clip}(\mathrm{round}(\mathrm{LogNormal}(\ln 150, 1.35)), 1, 300\,000)$, $n_f = \min(1 + \mathrm{Poisson}(6), n_{\mathrm{total}})$, $n_h = 1 + \mathrm{Poisson}(1.2)$. It is regenerated by \texttt{analysis/\allowbreak{}make\_\allowbreak{}population.py}, checked against every published figure (global cost 7\,557\,945; incremental cost $\sum(1 + n_f + n_h) = 203\,149$; aggregate ratio 37.2$\times$; median per-account ratio 15.3$\times$; 5th/95th percentiles 1.5$\times$ and 150.1$\times$) and archived as \texttt{data/\allowbreak{}population\_\allowbreak{}jcp\_\allowbreak{}seed42.csv} (NumPy 2.5.3; SHA-256 \texttt{a838ac1d\ldots b7fa}, full hash in the freeze manifest), so that no later analysis depends on the NumPy version (D-024). It provides per account the number of nodes $n_{\mathrm{total}}$, top-level items $n_f$ and holders $n_h$. One parameter is added: the file fraction $\varphi$, primary value 0.8, sensitivity $\{0.7, 0.9\}$ (the analytic model shows A2 varies by about $\pm4\,\%$ across this range). A1b assumes that every top-level item is a shared encrypted folder with all $n_h$ holders as members, an upper bound. Population-level results (RQ3, RQ4) combine the population with unit costs measured on each platform; no population is simulated on the devices.
+
+\textbf{Migration cost model (E4, E5; D-025).} Unit costs are measured per platform in E3 sessions: encapsulation $E_s$ and key generation $K_s$ for suite $s$, and the re-wrap $W$ of one key (AES-256-KW unwrap under the old parent and wrap under the new one; suite-independent). Every architecture migrates with the same semantics, those of the JCP migration operator (D-030): each node at the asymmetric boundary receives a fresh secret, its outgoing edges are re-wrapped under the new secret and the secret is re-encapsulated to each holder under the new suite; where node keys are themselves asymmetric (A2), the fresh secret is a new key pair. A fresh 256-bit symmetric key is one call to the random-number generator and is costed as zero. Per account, migrating to suite $s$ costs
+\begin{itemize}
+\item A3: 0 (no public-key sharing);
+\item A1: $n_h E_s + n_f W$ (re-encapsulate the root to each holder, re-wrap the root's children);
+\item A1b: $n_f n_h E_s + c\,W$ (rotate each shared folder key, re-encapsulate it to each holder and re-wrap its $c$ children). The population does not give $c$; it is bounded by $0 \le c \le n_{\mathrm{total}} - n_f$, and each comparison uses the bound that makes it conservative: A1b/A1 the lower bound ($c = 0$), A2/A1b the upper bound ($c = n_{\mathrm{total}} - n_f$);
+\item A2: $n_{\mathrm{total}} K_s + (n_{\mathrm{total}} + n_{\mathrm{files}} + n_h) E_s$, $n_{\mathrm{files}} = \mathrm{round}(\varphi\, n_{\mathrm{total}})$;
+\item naive global re-encryption in A1 (the JCP baseline, in JCP's own unit of one hierarchy element processed per key): $n_{\mathrm{total}} W + n_h E_s$.
+\end{itemize}
+Holders' own key generation is per user, common to every architecture and strategy, and excluded from time (included as a sensitivity analysis). The ratios are evaluated per platform.
+
+\textbf{Accounting of bytes and operations.} Table~\ref{tab:accounting} states, per architecture, what a migration to a new suite regenerates, reuses and rewrites, and how each item enters the byte model, the operation count and the time model. The byte model counts only suite-dependent bytes; the holders' new credentials are counted in bytes, because they must be stored, and not in time, because they are generated once per user.
+
+\begin{table}[H]
+\centering\small
+\caption{What a migration to suite $s$ does, per account (D-027).}\label{tab:accounting}
+\begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Arch.} & \textbf{Regenerated} & \textbf{Rewritten} & \textbf{Model terms}\\
+\midrule
+all & each holder's key pair (per user) & stored credential & bytes: $n_h(pk+sk)$; ops, time: excluded (sensitivity $n_h K_s$)\\
+A1 & root key & $n_h$ access packages; $n_f$ child wraps & bytes: $n_h\,ct$ (child wraps suite-independent); ops: $n_h$; time: $n_h E_s + n_f W$\\
+A1b & key of each shared top-level folder (rotated) & $n_f n_h$ access packages; $c$ child wraps, $0 \le c \le n_{\mathrm{total}} - n_f$ & bytes: $n_f n_h\,ct$ (child wraps suite-independent); ops: $n_f n_h$; time: $n_f n_h E_s + c\,W$, $c$ bounded as above\\
+A2 & key pair of every node & every node key ($pk$, stored $sk$), node packet and file key packet; root shared to holders & bytes: $n_{\mathrm{total}}(pk+sk+ct) + n_{\mathrm{files}}\,ct + n_h\,ct$; ops: $2n_{\mathrm{total}} + n_{\mathrm{files}} + n_h$; time: $n_{\mathrm{total}} K_s + (n_{\mathrm{total}} + n_{\mathrm{files}} + n_h) E_s$\\
+A3 & nothing & nothing & 0 (no public keys)\\
+naive A1 & every key of the hierarchy & $n_{\mathrm{total}}$ key wraps; $n_h$ packages & time: $n_{\mathrm{total}} W + n_h E_s$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+All architectures follow the same migration semantics; what differs is where the asymmetric boundary lies. The only quantity the population does not give is the number $c$ of children of the shared folders in A1b, which is bounded and used conservatively: the lower bound makes A1~$<$~A1b harder to support and the upper bound makes A1b~$<$~A2 harder to support.
+
+\textbf{What a migration protects.} In every architecture, and in the naive baseline, migration replaces keys, not content. Data encrypted before the migration remains under content keys that an adversary who recorded the old access packages and later breaks the old suite (``harvest now, decrypt later'') can recover. The cost model therefore measures the cost of moving the key hierarchy to the new suite, which protects access granted after the migration and data written after it; retroactive protection of recorded content would require re-encrypting the content and is outside P15 (D-030).
+
+%=====================================================================
+\section{Implementation constraints}\label{sec:impl}
+%=====================================================================
+\begin{itemize}
+\item A1 has one reference implementation per platform (OpenSSL 4.1.0, Bouncy Castle 1.84, \texttt{@noble/\allowbreak{}post-quantum} with WebCrypto); it measures E1, E2 and the unit costs of E3. A1b, A2 and A3 enter the confirmatory analysis through the cost model (Section~\ref{sec:population}) and the analytic byte model; they are implemented on the native platform only, for the exploratory validation below (D-026). No code from Iberbox, Proton, Nextcloud or Cryptomator.
+\item Credentials encoded as PKCS\#8 per RFC~9935; hybrid keys and ciphertexts per the composite draft; each access package carries the suite identifier in its header and binds it, with the holder identifier, into the derivation of the key-encryption key (HKDF-SHA256), so that a package whose suite identifier is altered does not open, as in JCP.
+\item Keys inside the hierarchy are wrapped with AES-KW (RFC~3394). Access packages for several holders are produced with one encapsulation per holder; content encryption is out of scope. AES-KW does not commit to the key; this is a stated threat and a non-claim, not a measured factor (D-022).
+\end{itemize}
+
+\subsection*{Exploratory validation of the cost model (native, D-026)}
+A1b (a key per shared top-level folder, encapsulated to each holder), A2 (a key pair per node and a key packet per file) and A3 (a password vault: scrypt and AES-KW, no public keys) are implemented in the native client with the same primitives as A1. A sample of 30 accounts is drawn from the archived population with \texttt{default\_\allowbreak{}rng(15)}: three accounts from each decile of $n_{\mathrm{total}}$ among accounts with $n_{\mathrm{total}} \le 1\,000$ (the cap keeps A2 with the hybrid, which generates an RSA key per node, within about one minute per account). For each sampled account, architecture (A1, A1b, A2, A3) and target suite (ML-KEM-1024, hybrid, seed form), the account state is built under RSA-3072 and its migration to the target suite is timed end to end in one fresh process (CPU pinned, randomised order, one run per combination). The measured time is compared with the time the cost model predicts from the native E3 unit costs of the main campaign, and the measured suite-dependent bytes with the analytic byte model. Reported: the ratio measured/predicted per architecture and suite (median, minimum, maximum) and the byte deviation. The model is described as adequate if the median ratio lies in $[0.8, 1.25]$. This analysis is exploratory and does not change any verdict on H3.1 or H4.1.
+
+\subsection*{Planned exploratory analyses (D-028)}
+Not confirmatory; they address the dependence of the conclusions on the JCP population, which also served to illustrate the theory. Implemented in \texttt{analysis/\allowbreak{}exploratory\_\allowbreak{}regions.py}. E3 sessions measure key generation, encapsulation, decapsulation, credential load and re-wrap.
+\begin{description}
+\item[X1 Efficiency regions.] With $q = E_s/W$ per platform and suite, the A1 speed-up of agile over naive migration is $S = (n_{\mathrm{total}} + n_h q)/(n_f + n_h q)$, so $S \ge k \iff n_{\mathrm{total}} \ge k\,n_f + (k-1)\,n_h q$. Reported: $q$ with its 90\,\% bootstrap interval and the minimum $n_{\mathrm{total}}$ for $k \in \{2, 5, 10\}$ and $(n_f, n_h) \in \{(7,1), (7,2), (7,5), (40,2)\}$. This result does not depend on any population.
+\item[X2 Alternative populations.] The H3.1 and H4.1 statistics are recomputed on three stress scenarios of 20\,000 accounts: \emph{collab}, as JCP with $n_h = 1 + \mathrm{Poisson}(5)$ (seed 101); \emph{archive}, $n_{\mathrm{total}} = \mathrm{clip}(\mathrm{round}(\mathrm{LogNormal}(\ln 2000, 1.0)), 1, 300\,000)$, $n_f = \min(1 + \mathrm{Poisson}(12), n_{\mathrm{total}})$, $n_h = 1$ (seed 102); \emph{flat}, as JCP with $n_f = \min(1 + \mathrm{Poisson}(40), n_{\mathrm{total}})$ (seed 103).
+\item[X3 Access latency by depth.] Steady-state cost of opening a node at depth $d = 1, \ldots, 10$: A1, $L_s + D_s + d\,U$; A2, $L_s + d\,(D_s + L_s)$; with $L_s$ the credential load (seed expansion if any), $D_s$ the decapsulation and $U = W/2$ one unwrap. It shows whether a post-quantum suite is paid at every access in per-node designs, not only at migration. This is an access scenario defined by the model: no caching of unwrapped or decapsulated keys between accesses, one decapsulation per level in A2 and one per session in A1; real clients that cache node keys pay less.
+\end{description}
+
+%=====================================================================
+\section{Threats to validity already identified}\label{sec:threats}
+%=====================================================================
+\begin{itemize}
+\item \textbf{Cost model.} H3.1 and H4.1 rest on per-operation unit costs combined by the cost model, not on end-to-end migrations; per-call overheads (allocation, I/O, scheduling) are not in the model. The native validation (D-026) measures how far the model is from end-to-end times on one platform.
+\item \textbf{Architectures are models.} A1b, A2 and A3 re-implement published designs with P15's suites; real products use other algorithms (Proton: Curve25519/OpenPGP; Nextcloud: RSA-2048) and other encodings. Results describe the architectures, not the products.
+\item \textbf{A3 is not functionally equivalent.} It has no public-key sharing; it is a lower bound, not an alternative.
+\item \textbf{Analytic predictions.} RQ1 and parts of RQ3 are close to arithmetic; the empirical contribution is the deviation of real artefacts from the predictions and the latency endpoints.
+\item \textbf{Within-run slowdown on the phone.} In the Android pilot the last quarter of each RSA-3072 run was about 15\,\% slower than the first, consistently across blocks and with battery temperature flat, which suggests a frequency governor reacting to sustained load. Run medians are robust to it and it affects every block equally; a sensitivity analysis on the first 250 timed operations is reported (D-017).
+\item \textbf{Unequal implementations in the browser.} RSA-OAEP runs in the browser's native WebCrypto code, ML-KEM in JavaScript (WebCrypto has no ML-KEM yet). The browser ratio between ML-KEM and RSA therefore measures what a web client can deploy today, not the algorithms themselves; it is reported as such.
+\item \textbf{Single devices.} One laptop and one phone; results are not claims about device classes. The hybrid i5-1340P architecture and HyperOS power management are controlled as above but not eliminated.
+\item \textbf{JavaScript is not constant-time} and \texttt{@noble/\allowbreak{}post-quantum} has no independent audit; timing is reported, side channels are out of scope.
+\item \textbf{Key commitment.} AES-KW (RFC~3394), used in A1 to wrap the root under each holder's KEK and the children under the root, does not commit to the key, and neither does the authenticated encryption of the modelled designs: a malicious creator could build a wrapped key that different holders unwrap to different values. This is a security property of the architectures and lies outside P15's endpoints (bytes and latency). A committing construction would add a fixed symmetric cost, for example a 32-byte HMAC-SHA-256 commitment and one hash computation per package, which is negligible against the costs measured here (D-022).
+\item \textbf{Composite KEM is still a draft} (RFC Editor Queue); sizes are re-checked at publication.
+\end{itemize}
+
+%=====================================================================
+\section{Explicit non-claims}
+%=====================================================================
+No claim that the architecture comparison (RQ3) and the population projections (RQ4) are end-to-end migration benchmarks on every platform: they combine unit costs measured on every platform with the cost model, which is validated end to end on the native platform only (D-026). No claim that any migration strategy protects content recorded before the migration against an adversary who later breaks the old suite. No claim on the security of ML-KEM, of the composite construction or of any product; no claim on key commitment or on robustness against malicious creators when several holders open the same wrapped key; no side-channel analysis; no throughput under server concurrency (covered by Lingala et al.); no claim that measured latencies hold for other devices; no claim about Iberbox.
+
+%=====================================================================
+\section{Registration and deviations}\label{sec:registration}
+%=====================================================================
+At freeze, this document, the analytic model, the population file and the analysis scripts are registered on OSF (independent registry with public timestamp) and tagged in the project repository before the first timed run. Lingala et al.\ registered only by a push to a private repository; an independent registry avoids that limitation. Every deviation is logged with date, reason and the analyses it affects; analyses not listed in Section~\ref{sec:analysis} are labelled exploratory.
+
+%=====================================================================
+\section{Decision log}\label{sec:log}
+%=====================================================================
+\begin{longtable}{l l p{11.5cm}}
+\toprule
+\textbf{ID} & \textbf{Date} & \textbf{Decision}\\
+\midrule
+D-001 & 2026-11-16 & F0 closed: no work covers RQ1+RQ2 in this context; no reorientation (doc.\ arranque v0.3).\\
+D-002 & 2026-11-16 & Four architectures A1, A1b, A2, A3 anchored in JCP, Nextcloud, Proton Drive and Cryptomator designs.\\
+D-003 & 2026-11-16 & Hybrid = \texttt{id-MLKEM1024-RSA3072-SHA3-256}; RSA baseline OAEP-SHA-256 to match it.\\
+D-004 & 2026-11-16 & Private-key format (seed/expanded) is a factor (RFC~9935).\\
+D-005 & 2026-11-16 & Population projection: JCP variables plus file fraction $\varphi$ (0.8; 0.7/0.9); A1b maximal sharing.\\
+D-006 & 2026-11-16 & ML-KEM-768 included (comparability with Lingala et al.\ and deployed practice); RFC~9980 OpenPGP contrast excluded, discussed as threat.\\
+D-007 & 2026-11-16 & Devices: ASUS Zenbook 14 UX3402VA (i5-1340P) and POCO X8 Pro (Dimensity 8500-Ultra).\\
+D-008 & 2026-11-16 & Native desktop measured on Windows directly, not WSL and not a Linux live system.\\
+D-009 & 2026-11-16 & Methods adopted from Lingala et al.: run as unit, randomised blocks, paired log ratios, Holm, power from pilot, blind stall rule, one-call bindings. Registration on OSF instead of repository-only.\\
+D-010 & 2026-11-17 & Non-inferiority margin for H2.2: $\delta_{\mathrm{abs}} = 16$\,ms (one frame at 60\,Hz), replacing the 50\,ms proposed in v0.1, which would have made the test uninformative; sensitivity at 5 and 50\,ms.\\
+D-011 & 2026-11-17 & All native work on the laptop itself (Windows 11, MSYS2 UCRT64); no virtual machine. Code in a private GitHub repository (jraragon/p15).\\
+D-012 & 2026-11-17 & Native toolchain fixed: OpenSSL 4.1.0 (not 3.5 LTS; same ML-KEM API, no x86-64 ML-KEM changes), GCC 16.2.0, CMake 4.5.0, Ninja 1.13.2. No package updates until measurements end.\\
+D-013 & 2026-11-17 & Credentials loaded through the PKCS\#8 decoder for every suite, including the ML-KEM part of the hybrid; library defaults on import are kept and reported (OpenSSL 4.1.0: no consistency test when expanding a seed, randomised pairwise test when importing an expanded key). Disabling the test is exploratory.\\
+D-014 & 2026-11-17 & Native pilot done (results/pilot\_open\_20261117\_154623); 10 blocks per cell. Pilot deviation: one idle Chrome window left open, offline; affects only the variance estimate, conservatively.\\
+D-015 & 2026-11-17 & H2.3 revised after the pilot (see Section~\ref{sec:predictions}). Pilot medians are not used as evidence for any hypothesis.\\
+D-016 & 2026-11-21 & Browser pilots done on the laptop (results/pilot\_web\_chrome-desktop\_open\_20261121\_155506, results/pilot\_web\_firefox-desktop\_open\_20261121\_160334; 5 blocks $\times$ 7 configurations $\times$ 1\,000 operations). In Chrome, started just after a browser update, the first two blocks were slower and drifted within runs, and blocks 3--5 were stable; Firefox, started after 5 idle minutes, was stable from the first block. Rule adopted: 5 idle minutes after browser start and one discarded warm-up block. Browser versions recorded (Section~\ref{sec:platforms}).\\
+D-017 & 2026-11-21 & Android pilot done (results/pilot\_android\_open\_20261120\_104800; 5 blocks, 60\,s cool-down; 35 runs, no errors). Within-run slowdown of RSA runs noted (Section~\ref{sec:threats}); sensitivity analysis on the first 250 operations added. Pilot deviation: the final copy of results from the phone failed (MSYS2 path conversion) and was done by hand; the driver script was fixed.\\
+D-018 & 2026-11-21 & Mobile browser pilot done (results/pilot\_web\_chrome-android\_open\_20261121\_162121; 5 blocks, 20\,s cool-down). The cool-down for the mobile browser is 20\,s: battery temperature stayed within 34.2--34.5\,\textdegree C over the whole session. A first attempt with 60\,s cool-down and no temperature log was stopped after 4 runs and discarded before analysis.\\
+D-019 & 2026-11-21 & Thermal threshold of 40\,\textdegree C confirmed: across the mobile pilots battery temperature stayed within 29.2--34.5\,\textdegree C and the OS never reported thermal stress (status 0). The threshold is kept as a safeguard.\\
+D-020 & 2026-11-21 & H2.3 changed from a directional prediction to estimation per platform (Section~\ref{sec:predictions}). With the paired standard deviations of all four pilots, 10 blocks exceed the requirement of every primary test on every platform (at most 3 blocks needed for H2.2 at 5\,ms); 10 blocks per cell kept everywhere.\\
+D-021 & 2026-11-21 & (a) H2.2 uses the hybrid credential in seed form, the only private-key form the composite draft defines; the expanded hybrid is exploratory. (b) The warm-up block of D-016 is applied on every platform, for uniformity. (c) The three implementations (OpenSSL 4.1.0, Bouncy Castle 1.84, \texttt{@noble/\allowbreak{}post-quantum} 0.7.1 with WebCrypto) reproduce the shared secret of the draft's vectors for \texttt{id-MLKEM1024-RSA3072-SHA3-256} and ML-KEM-1024 (lamps-wg/draft-composite-kem, commit efdc41b, 14 October 2026); this confirms the combiner order, the label \texttt{MLKEM1024-RSAOAEP3072}, the RSA-OAEP parameters and the private-key layout. (d) Primary analysis script written and tested on simulated data.\\
+D-022 & 2026-11-21 & Key commitment across holders treated as a non-claim and a stated threat (Section~\ref{sec:threats}), not as a measured factor: its cost would be a fixed, negligible symmetric overhead.\\
+D-023 & 2026-11-21 & Correctness checks done (results/checks\_20261121/correctness.txt). (a) The 70 FIPS~203 ACVP vectors for ML-KEM-768 and ML-KEM-1024 (key generation from seed, decapsulation including implicit rejection; usnistgov/ACVP-Server, commit 975de31) pass through each implementation's PKCS\#8 loading path: OpenSSL 4.1.0, Bouncy Castle 1.84 and \texttt{@noble/\allowbreak{}post-quantum} 0.7.1, 0 failures. (b) Seven accounts (every suite and format) created by each implementation are opened by every implementation, 63 openings, 0 failures. Tampered vectors and packages are reported as failures. The checks ran on Linux builds of the same library versions and the same client source as on the devices; the on-device selftests include the composite-draft vectors, and the native ACVP check is repeated on Windows when the client is rebuilt.\\
+D-024 & 2026-11-21 & Population corrected to the published JCP model. Versions 0.1--0.6 regenerated the population from the pre-publication script, without the cap $n_f \le n_{\mathrm{total}}$ (225 accounts affected) and with incremental cost $n_f + n_h$, and quoted 183\,890 units and a median of 17.0$\times$; the published figures are 203\,149 units and 15.3$\times$. The population is now archived. Effect on the predictions: A1b migration 526\,$\to$\,524 MiB and 306\,514\,$\to$\,304\,956 operations; all other entries unchanged.\\
+D-025 & 2026-11-21 & Migration cost model (Section~\ref{sec:population}) and evaluation per platform specified for H3.1 and H4.1; key re-wrap added to E3 and to the three clients; bootstrap over measured blocks with the population fixed. Disclosure: before this specification, rough unit costs from the E2 pilots and from local runs were used to anticipate H4.1 (median speed-up about 9--14$\times$ natively and about 1.6$\times$ in browsers). The threshold of $10\times$ and the direction, registered before any pilot, are kept unchanged; the cost unit is JCP's own. The deterministic E1 checks (P1.x) were run on the three clients' size tables (results/checks\_20261121/e1\_checks.txt): P1.1 and P1.3 as predicted; P1.2 holds for the private-key content (exactly 64 bytes) and, at the PKCS\#8 level, the difference is 61 bytes because the composite AlgorithmIdentifier is 3 bytes shorter than rsaEncryption's; reported as an explained deviation, prediction unchanged.\\
+D-026 & 2026-11-21 & Scope of the implementations: A1 on every platform; A1b, A2 and A3 on the native platform only, for an exploratory validation of the cost model on a fixed sample of 30 accounts (Section~\ref{sec:impl}). Replaces ``one reference implementation per platform of the four architectures'' (v0.1--v0.7), which the cost model of D-025 makes unnecessary for the confirmatory analysis.\\
+D-027 & 2026-11-21 & Consistency audit after an external review of v0.8. (a) H2.1 tested on E2 (opening from a seed credential, which includes loading, seed expansion and decapsulation), as the analysis script already did; the text spoke of decapsulation. (b) H2.1 has three outcomes (supported, refuted, inconclusive); the script reports them. (c) Accounting of bytes, operations and time made explicit (Table~\ref{tab:accounting}); holders' key generation added as a sensitivity analysis. (d) The 16\,ms margin described as an operational threshold, not a perceptual limit. (e) A3 described as a lower reference in H3.1. (f) RQ3 and RQ4 results are not presented as end-to-end benchmarks on every platform. (g) Traceability table added (Appendix~\ref{app:trace}). No hypothesis, threshold, endpoint or measurement was changed.\\
+D-028 & 2026-11-21 & Planned exploratory analyses X1--X3, after an external review of v0.2 that pointed to the dependence on the JCP population and asked for conditions and thresholds of efficiency. They are registered as exploratory, not confirmatory, because the pilots already give approximate unit costs; credential load and decapsulation are added to the E3 sessions.\\
+D-029 & 2026-11-21 & After an external review of v0.9: every hypothesis has three outcomes (supported, refuted, inconclusive); a refutation now requires the interval to lie wholly on the wrong side of the threshold (H4.1 and the A2/A1 threshold of H3.1: upper 90\,\% bound below 10; order of H3.1: an interval wholly below 1; H2.2: inferiority shown, 90\,\% interval wholly above $\delta_{\mathrm{abs}}$). Until v0.9, a lower bound below the threshold or a failure to show non-inferiority counted as a refutation, which confuses absence of evidence with evidence of the opposite. Directions and thresholds unchanged. Implemented in both analysis scripts and tested with cases of each outcome. Also stated that A1 and A1b perform different tasks (A1b a lower bound, which makes the order conservative) and that X3 is an access scenario defined by the model.\\
+D-030 & 2026-11-21 & Semantic check of the cost model after an external review of v0.10. Every architecture now follows the same migration semantics (the JCP operator: fresh secret, re-wrap of outgoing edges, re-encapsulation to holders). Until v0.10 the A1b folder keys were re-encapsulated without rotation, which treated A1 and A1b differently; A1b now rotates its folder keys, and the unknown number of their children is bounded and used conservatively in each comparison (lower bound for A1b/A1, upper bound for A2/A1b; with the lower bound, A2/A1b had been anti-conservative). The generation of a fresh symmetric key is costed as zero. Stated that key migration does not protect content recorded before it (``harvest now, decrypt later''), in the model and in the non-claims. The 90\,\% decision intervals of H3.1 and H4.1 are the 5th and 95th percentiles of the bootstrap medians, verified by a direct test. Directions and thresholds unchanged.\\
+D-031 & 2026-11-21 & Design frozen as v1.0 (content of v0.11), after three rounds of external review (v0.2, v0.8--v0.11). Manifest and repository tag as in Section~\ref{sec:freeze}. Deviations from here on are logged with date, reason and affected analyses.\\
+D-032 & 2026-11-21 & v1.1, before registration: title (the internal code P15 is kept only as a study code) and authors (Jesús F. Rodríguez-Aragón, Carolina Zato) with affiliations. No other change: design, hypotheses, thresholds, decision rules and scripts are those of v1.0. New manifest; superseded by v1.2 before registration, without tag.\\
+D-033 & 2026-11-21 & v1.2, before registration: Section~\ref{sec:prior} added, which gathers in one place the prior knowledge from the pilots (what was measured, what it showed, what it changed and did not change, and which results can still surprise). No change to design, hypotheses, thresholds, decision rules or scripts. New manifest and tag \texttt{p15-prereg-v1.2}; v1.2 is the version registered on OSF.\\
+\bottomrule
+\end{longtable}
+
+%=====================================================================
+\section{Open items before freeze}
+%=====================================================================
+None.
+
+%=====================================================================
+\section{Pre-experimental design freeze}\label{sec:freeze}
+%=====================================================================
+\textbf{Frozen on 21 November 2026} (D-031). Conditions met: no open items; analysis scripts written and tested on simulated data with known truth (E1, E2, E4, E5); population archived. The freeze manifest (\texttt{prereg/freeze\_manifest.txt}) lists the SHA-256 of this document (source and PDF), the analytic model, the population file, the test data, the analysis scripts and tests, the tools, and the sources and run scripts of the three A1 clients; the repository is tagged \texttt{p15-prereg-v1.2} (earlier unregistered freezes: \texttt{p15-prereg-v1.0}; v1.1 without tag; D-032, D-033). The OSF registration identifier is recorded in \texttt{prereg/OSF\_REGISTRATION.txt} after submission. No timed run of the main campaign precedes the freeze; the pilots of 17--21 November 2026 are listed in the decision log and are not used as evidence for any hypothesis.
+
+\appendix
+\section{Traceability: hypothesis, data, script, decision rule}\label{app:trace}
+\begin{longtable}{>{\raggedright\arraybackslash}p{1.9cm} >{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}p{5.4cm}}
+\toprule
+\textbf{Item} & \textbf{Data} & \textbf{Script, function} & \textbf{Decision rule}\\
+\midrule
+P1.1--P1.3 & size tables of the three clients; interchange file of a hybrid account & \texttt{e1\_\allowbreak{}sizes.py} & deterministic; deviations reported and explained\\
+H2.1 & E2 run medians, 5 platforms, 10 blocks, block 00 discarded; ML-KEM-1024 seed vs RSA-3072 & \texttt{primary\_\allowbreak{}analysis.py}, \texttt{primary()} & one-sided paired $t$ on log ratio, Holm over 10 tests: supported; 90\,\% interval wholly above 1: refuted; else inconclusive\\
+H2.2 & E2; hybrid seed vs RSA-3072 & \texttt{primary\_\allowbreak{}analysis.py}, \texttt{primary()} & one-sided paired $t$ of the difference against 16\,ms, Holm: supported; 90\,\% interval wholly above 16\,ms: refuted; else inconclusive; sensitivity 5 and 50\,ms\\
+H2.3 & E2; seed vs expanded per suite & \texttt{primary\_\allowbreak{}analysis.py}, \texttt{h23()} & estimation, 95\,\% interval\\
+H3.1 & E3 unit costs ($E_s$, $K_s$, $W$); archived population; $\varphi = 0.8$ & \texttt{population\_\allowbreak{}analysis.py}, \texttt{analyse()} & block bootstrap, 90\,\% intervals (5th and 95th percentiles of the bootstrap medians); A1b bounded conservatively (D-030); order: both adjacent ratios above 1 (supported) or one below 1 (refuted); threshold: lower bound of median A2/A1 $\ge 10$ (supported) or upper bound $< 10$ (refuted); else inconclusive\\
+H4.1 & E3 unit costs ($E_s$, $W$); archived population & \texttt{population\_\allowbreak{}analysis.py}, \texttt{analyse()} & per platform and suite, 90\,\% interval as for H3.1: lower bound $\ge 10$ supported; upper bound $< 10$ refuted; else inconclusive\\
+Sensitivity & as above & first 250 operations; flagged runs excluded; $\delta$ 5/50\,ms; $\varphi$ 0.7/0.9; holders' key generation & reported next to the primary verdicts\\
+Robustness & as above & bootstrap of primary statistics; order-effect regression; TOST $\pm 2, 5, 10\,\%$ & reported, not confirmatory\\
+X1--X3 & E3 unit costs & \texttt{exploratory\_\allowbreak{}regions.py} & exploratory\\
+\bottomrule
+\end{longtable}
+Tests on simulated data with known truth: \texttt{test\_\allowbreak{}primary\_\allowbreak{}analysis.py}, \texttt{test\_\allowbreak{}population\_\allowbreak{}analysis.py}.
+
+\end{document}

@@ -1,0 +1,21 @@
+# p15_web bench
+# user_agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Mobile Safari/537.36
+# browser_full_version=Not-A.Brand 99.0.0.0; Google Chrome 157.0.8103.78; Chromium 157.0.8103.78 | platform 16.0.0
+# cross_origin_isolated=true
+# timer_resolution_us=5.000
+# hardware_concurrency=8
+# noble_post_quantum=0.7.1 noble_hashes=2.4.0
+# suite=mlkem768 format=seed op=keygen iters=10 warmup=50 nf=7
+# run_id=r00p3_mlkem768_seed
+# time_source=performance.now
+run_id,suite,format,op,iter,ns
+r00p3_mlkem768_seed,mlkem768,seed,keygen,0,490000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,1,485000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,2,495000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,3,490000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,4,490000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,5,585000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,6,550000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,7,520000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,8,500000
+r00p3_mlkem768_seed,mlkem768,seed,keygen,9,535000

@@ -1,0 +1,187 @@
+{
+ "id": "chrome-desktop_20261121_155506",
+ "dir": "results/pilot_web_chrome-desktop_open_20261121_155506",
+ "runs": [
+  {
+   "id": "r01p1_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p2_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r01p3_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p4_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r01p5_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r01p6_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r01p7_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r02p1_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r02p2_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r02p3_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r02p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r02p5_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r02p6_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r02p7_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r03p1_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r03p2_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r03p3_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r03p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r03p5_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r03p6_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r03p7_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p1_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r04p2_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p3_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r04p4_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r04p5_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  },
+  {
+   "id": "r04p6_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r04p7_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p1_mlkem1024_expanded",
+   "suite": "mlkem1024",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p2_rsa3072_na",
+   "suite": "rsa3072",
+   "format": "na"
+  },
+  {
+   "id": "r05p3_hybrid_expanded",
+   "suite": "hybrid",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p4_hybrid_seed",
+   "suite": "hybrid",
+   "format": "seed"
+  },
+  {
+   "id": "r05p5_mlkem768_expanded",
+   "suite": "mlkem768",
+   "format": "expanded"
+  },
+  {
+   "id": "r05p6_mlkem768_seed",
+   "suite": "mlkem768",
+   "format": "seed"
+  },
+  {
+   "id": "r05p7_mlkem1024_seed",
+   "suite": "mlkem1024",
+   "format": "seed"
+  }
+ ],
+ "iters": 1000,
+ "warmup": 50,
+ "nf": 7,
+ "op": "open",
+ "cooldown_s": 2,
+ "start_delay_s": 10
+}

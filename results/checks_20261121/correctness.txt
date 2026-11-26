@@ -1,0 +1,86 @@
+# Correctness checks run on 2026-11-21 (Linux builds of the same library versions as on the devices)
+# OpenSSL 4.1.0 (native code, gcc), Bouncy Castle 1.84 (P15Core.java on OpenJDK 21.0.12.1), @noble/post-quantum 0.7.1 on Node v22.23.4
+# git commit before this check: 16be6911c2ac9bcac7e1d71347f5958742dea795
+
+== Selftests (include the composite-draft KATs)
+P15 A1 selftest -- OpenSSL 4.1.0 23 Oct 2026
+  ok:   ML-KEM-1024 decapsulation matches composite-draft vector
+SELFTEST PASSED (0 failures)
+P15 A1 selftest (Bouncy Castle BouncyCastle Security Provider v1.84)
+  ok:   ML-KEM-1024 decapsulation matches composite-draft vector
+SELFTEST PASSED (0 failures)
+  ok:   ML-KEM-1024 decapsulation matches composite-draft vector
+SELFTEST PASSED (0 failures)
+
+== FIPS 203 ACVP vectors (testdata/acvp_mlkem.txt)
+ACVP ML-KEM (OpenSSL 4.1.0 23 Oct 2026): 70 vectors, 0 failures
+ACVP ML-KEM (Bouncy Castle BouncyCastle Security Provider v1.84): 70 vectors, 0 failures
+ACVP ML-KEM (@noble/post-quantum 0.7.1): 70 vectors, 0 failures
+
+== Cross-platform: 7 accounts exported by each implementation, opened by every implementation
+  ok:    bouncycastle -> openssl: hybrid    expanded (7 children)
+  ok:    bouncycastle -> openssl: hybrid    seed     (7 children)
+  ok:    bouncycastle -> openssl: mlkem1024 expanded (7 children)
+  ok:    bouncycastle -> openssl: mlkem1024 seed     (7 children)
+  ok:    bouncycastle -> openssl: mlkem768  expanded (7 children)
+  ok:    bouncycastle -> openssl: mlkem768  seed     (7 children)
+  ok:    bouncycastle -> openssl: rsa3072   na       (7 children)
+  ok:    noble    -> openssl: hybrid    expanded (7 children)
+  ok:    noble    -> openssl: hybrid    seed     (7 children)
+  ok:    noble    -> openssl: mlkem1024 expanded (7 children)
+  ok:    noble    -> openssl: mlkem1024 seed     (7 children)
+  ok:    noble    -> openssl: mlkem768  expanded (7 children)
+  ok:    noble    -> openssl: mlkem768  seed     (7 children)
+  ok:    noble    -> openssl: rsa3072   na       (7 children)
+  ok:    openssl  -> openssl: hybrid    expanded (7 children)
+  ok:    openssl  -> openssl: hybrid    seed     (7 children)
+  ok:    openssl  -> openssl: mlkem1024 expanded (7 children)
+  ok:    openssl  -> openssl: mlkem1024 seed     (7 children)
+  ok:    openssl  -> openssl: mlkem768  expanded (7 children)
+  ok:    openssl  -> openssl: mlkem768  seed     (7 children)
+  ok:    openssl  -> openssl: rsa3072   na       (7 children)
+Cross-platform open on OpenSSL: 21 files, 0 failures
+  ok:    bouncycastle -> bouncycastle: hybrid    expanded (7 children)
+  ok:    bouncycastle -> bouncycastle: hybrid    seed     (7 children)
+  ok:    bouncycastle -> bouncycastle: mlkem1024 expanded (7 children)
+  ok:    bouncycastle -> bouncycastle: mlkem1024 seed     (7 children)
+  ok:    bouncycastle -> bouncycastle: mlkem768  expanded (7 children)
+  ok:    bouncycastle -> bouncycastle: mlkem768  seed     (7 children)
+  ok:    bouncycastle -> bouncycastle: rsa3072   na       (7 children)
+  ok:    noble        -> bouncycastle: hybrid    expanded (7 children)
+  ok:    noble        -> bouncycastle: hybrid    seed     (7 children)
+  ok:    noble        -> bouncycastle: mlkem1024 expanded (7 children)
+  ok:    noble        -> bouncycastle: mlkem1024 seed     (7 children)
+  ok:    noble        -> bouncycastle: mlkem768  expanded (7 children)
+  ok:    noble        -> bouncycastle: mlkem768  seed     (7 children)
+  ok:    noble        -> bouncycastle: rsa3072   na       (7 children)
+  ok:    openssl      -> bouncycastle: hybrid    expanded (7 children)
+  ok:    openssl      -> bouncycastle: hybrid    seed     (7 children)
+  ok:    openssl      -> bouncycastle: mlkem1024 expanded (7 children)
+  ok:    openssl      -> bouncycastle: mlkem1024 seed     (7 children)
+  ok:    openssl      -> bouncycastle: mlkem768  expanded (7 children)
+  ok:    openssl      -> bouncycastle: mlkem768  seed     (7 children)
+  ok:    openssl      -> bouncycastle: rsa3072   na       (7 children)
+Cross-platform open on Bouncy Castle: 21 files, 0 failures
+  ok:    bouncycastle -> noble: hybrid    expanded (7 children)
+  ok:    bouncycastle -> noble: hybrid    seed     (7 children)
+  ok:    bouncycastle -> noble: mlkem1024 expanded (7 children)
+  ok:    bouncycastle -> noble: mlkem1024 seed     (7 children)
+  ok:    bouncycastle -> noble: mlkem768  expanded (7 children)
+  ok:    bouncycastle -> noble: mlkem768  seed     (7 children)
+  ok:    bouncycastle -> noble: rsa3072   na       (7 children)
+  ok:    noble        -> noble: hybrid    expanded (7 children)
+  ok:    noble        -> noble: hybrid    seed     (7 children)
+  ok:    noble        -> noble: mlkem1024 expanded (7 children)
+  ok:    noble        -> noble: mlkem1024 seed     (7 children)
+  ok:    noble        -> noble: mlkem768  expanded (7 children)
+  ok:    noble        -> noble: mlkem768  seed     (7 children)
+  ok:    noble        -> noble: rsa3072   na       (7 children)
+  ok:    openssl      -> noble: hybrid    expanded (7 children)
+  ok:    openssl      -> noble: hybrid    seed     (7 children)
+  ok:    openssl      -> noble: mlkem1024 expanded (7 children)
+  ok:    openssl      -> noble: mlkem1024 seed     (7 children)
+  ok:    openssl      -> noble: mlkem768  expanded (7 children)
+  ok:    openssl      -> noble: mlkem768  seed     (7 children)
+  ok:    openssl      -> noble: rsa3072   na       (7 children)
+Cross-platform open on noble/WebCrypto: 21 files, 0 failures

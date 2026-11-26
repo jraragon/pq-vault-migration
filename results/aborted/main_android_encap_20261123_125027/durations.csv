@@ -1,0 +1,8 @@
+run_id,wall_s
+r00p1_hybrid_seed,1
+r00p2_mlkem1024_seed,1
+r00p3_mlkem768_seed,2
+r00p4_rsa3072_na,2
+r00p5_mlkem768_expanded,1
+r00p6_mlkem1024_expanded,1
+r00p7_hybrid_expanded,3

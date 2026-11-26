@@ -1,0 +1,21 @@
+# p15_web bench
+# user_agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Mobile Safari/537.36
+# browser_full_version=Not-A.Brand 99.0.0.0; Google Chrome 157.0.8103.78; Chromium 157.0.8103.78 | platform 16.0.0
+# cross_origin_isolated=true
+# timer_resolution_us=5.000
+# hardware_concurrency=8
+# noble_post_quantum=0.7.1 noble_hashes=2.4.0
+# suite=hybrid format=expanded op=keygen iters=10 warmup=50 nf=7
+# run_id=r01p3_hybrid_expanded
+# time_source=performance.now
+run_id,suite,format,op,iter,ns
+r01p3_hybrid_expanded,hybrid,expanded,keygen,0,329405000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,1,1027105000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,2,304800000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,3,379170000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,4,164690000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,5,407090000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,6,463165000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,7,597650000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,8,391575000
+r01p3_hybrid_expanded,hybrid,expanded,keygen,9,243020000

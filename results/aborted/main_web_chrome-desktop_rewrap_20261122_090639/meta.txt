@@ -1,0 +1,11 @@
+date_utc=2026-11-22T08:06:39.475344+00:00
+git_commit=de7f5ecfd656794c66456e15bb0943f6fcc1b209
+label=chrome-desktop
+kind=main
+reps=10 iters=1000 warmup=50 nf=7 op=rewrap cooldown_s=2
+user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36
+browser_full_version=Chromium 158.0.8127.37; Not.A/Brand 24.0.0.0; Google Chrome 158.0.8127.37 | platform 19.0.0
+cross_origin_isolated=true
+timer_resolution_us=5.000
+hardware_concurrency=16
+noble_post_quantum=0.7.1 noble_hashes=2.4.0

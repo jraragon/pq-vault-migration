@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "Replication package: the impact of key-hierarchy architecture on post-quantum migration costs in client-controlled encrypted storage"
+type: software
+version: "1.0.0"
+authors:
+  - family-names: "Rodríguez-Aragón"
+    given-names: "Jesús F."
+    affiliation: "University of Salamanca; Universidad Internacional de La Rioja"
+    orcid: "https://orcid.org/0000-0001-7292-610X"
+  - family-names: "Zato"
+    given-names: "Carolina"
+    affiliation: "University of Salamanca"
+    orcid: "https://orcid.org/0000-0003-3023-8258"
+  - family-names: "Alaejos Herrero"
+    given-names: "Lidia"
+    affiliation: "University of Salamanca"
+    orcid: "https://orcid.org/0009-0002-1445-3986"
+  - family-names: "Fernández-Díaz"
+    given-names: "Julia"
+    affiliation: "University of Oviedo"
+    orcid: "https://orcid.org/0009-0007-2419-2405"
+  - family-names: "Rodríguez-González"
+    given-names: "Sara"
+    affiliation: "University of Salamanca"
+    orcid: "https://orcid.org/0000-0002-3081-5177"
+repository-code: "https://github.com/jraragon/pq-vault-migration"
+license: MIT
+keywords:
+  - post-quantum cryptography
+  - ML-KEM
+  - crypto-agility
+  - client-side encryption
+  - key hierarchies
+  - pre-registration

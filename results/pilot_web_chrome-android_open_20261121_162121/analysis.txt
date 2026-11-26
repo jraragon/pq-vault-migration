@@ -1,0 +1,30 @@
+35 runs, 5 blocks, 7 configurations
+
+E2 open account (A1, n_f = 7) -- per configuration
+                    median_of_run_medians_us  ...  drift_last_vs_first_%
+cfg                                           ...                       
+mlkem768:expanded                      870.0  ...                    1.2
+mlkem1024:expanded                    1255.0  ...                    2.0
+mlkem768:seed                         1440.0  ...                    3.4
+mlkem1024:seed                        2142.5  ...                    2.1
+rsa3072:na                            4575.0  ...                    0.5
+hybrid:expanded                       5925.0  ...                    0.2
+hybrid:seed                           6767.5  ...                    0.5
+
+[7 rows x 7 columns] 
+
+Paired by block (run medians)
+                             comparison  ratio_geo  sd_logratio  diff_ms_mean  sd_diff_ms  n
+    H2.1  ML-KEM-1024 (seed) / RSA-3072     0.4702       0.0119       -2.4275      0.0281  5
+      ML-KEM-1024 (expanded) / RSA-3072     0.2730       0.0157       -3.3315      0.0260  5
+           ML-KEM-768 (seed) / RSA-3072     0.3155       0.0191       -3.1365      0.0455  5
+         H2.2  hybrid (seed) - RSA-3072     1.4786       0.0076        2.1930      0.0413  5
+           hybrid (expanded) - RSA-3072     1.2923       0.0036        1.3395      0.0164  5
+            ML-KEM-1024 seed / expanded     1.7227       0.0181        0.9040      0.0304  5 
+
+Repetitions needed (normal approximation, then t-correction by iteration)
+  H2.2 non-inferiority, delta =   16 ms: n = 1 (pre-registered minimum 10)
+  H2.2 non-inferiority, delta =    5 ms: n = 1 (pre-registered minimum 10)
+  H2.1 standardised effect |mean log ratio| / sd = 63.6: n = 10 (minimum) is far above what is needed
+
+Order effect: position-in-block coefficient = -0.18 % per position (p = 0.067)

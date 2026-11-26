@@ -1,0 +1,33 @@
+# p15_android bench
+# device=Xiaomi 2511FPC34G (klee)
+# soc=Mediatek MT6899
+# android=16 sdk=36 build=BP2A.250605.031.A3
+# security_patch=2026-08-01
+# bouncycastle=BouncyCastle Security Provider v1.84
+# app_debuggable=false
+# suite=mlkem768 format=seed op=keygen iters=20 warmup=5 nf=7
+# run_id=r00p5_mlkem768_seed
+# thermal_before=battery_temp_c=29.0 battery_level=95 plugged=2 thermal_status=0 thermal_headroom=0.07666664
+# thermal_after=battery_temp_c=29.0 battery_level=95 plugged=2 thermal_status=0 thermal_headroom=NaN
+# time_source=System.nanoTime
+run_id,suite,format,op,iter,ns
+r00p5_mlkem768_seed,mlkem768,seed,keygen,0,342769
+r00p5_mlkem768_seed,mlkem768,seed,keygen,1,93846
+r00p5_mlkem768_seed,mlkem768,seed,keygen,2,82692
+r00p5_mlkem768_seed,mlkem768,seed,keygen,3,548308
+r00p5_mlkem768_seed,mlkem768,seed,keygen,4,658462
+r00p5_mlkem768_seed,mlkem768,seed,keygen,5,512308
+r00p5_mlkem768_seed,mlkem768,seed,keygen,6,97461
+r00p5_mlkem768_seed,mlkem768,seed,keygen,7,83693
+r00p5_mlkem768_seed,mlkem768,seed,keygen,8,143154
+r00p5_mlkem768_seed,mlkem768,seed,keygen,9,94770
+r00p5_mlkem768_seed,mlkem768,seed,keygen,10,83461
+r00p5_mlkem768_seed,mlkem768,seed,keygen,11,82385
+r00p5_mlkem768_seed,mlkem768,seed,keygen,12,85615
+r00p5_mlkem768_seed,mlkem768,seed,keygen,13,86154
+r00p5_mlkem768_seed,mlkem768,seed,keygen,14,85615
+r00p5_mlkem768_seed,mlkem768,seed,keygen,15,87308
+r00p5_mlkem768_seed,mlkem768,seed,keygen,16,83769
+r00p5_mlkem768_seed,mlkem768,seed,keygen,17,84231
+r00p5_mlkem768_seed,mlkem768,seed,keygen,18,115461
+r00p5_mlkem768_seed,mlkem768,seed,keygen,19,192308

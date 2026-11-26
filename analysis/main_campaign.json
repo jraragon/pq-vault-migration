@@ -1,0 +1,43 @@
+{
+  "native": {
+    "open": "results/main_native_open_20261122_000611",
+    "encap": "results/main_native_encap_20261122_012435",
+    "keygen": "results/main_native_keygen_20261122_001011",
+    "decap": "results/main_native_decap_20261122_012727",
+    "load": "results/main_native_load_20261122_013122",
+    "rewrap": "results/main_native_rewrap_20261122_013416"
+  },
+  "android": {
+    "open": "results/main_android_open_20261123_110618",
+    "encap": "results/main_android_encap_20261123_113814",
+    "keygen": "results/main_android_keygen_20261123_233301",
+    "decap": "results/main_android_decap_20261123_125627",
+    "load": "results/main_android_load_20261123_150258",
+    "rewrap": "results/main_android_rewrap_20261123_154819"
+  },
+  "chrome_desktop": {
+    "open": "results/main_web_chrome-desktop_open_20261122_100003",
+    "encap": "results/main_web_chrome-desktop_encap_20261122_100003",
+    "keygen": "results/main_web_chrome-desktop_keygen_20261122_100003",
+    "decap": "results/main_web_chrome-desktop_decap_20261122_100003",
+    "load": "results/main_web_chrome-desktop_load_20261122_170510",
+    "rewrap": "results/main_web_chrome-desktop_rewrap_20261122_172133"
+  },
+  "firefox_desktop": {
+    "open": "results/main_web_firefox-desktop_open_20261122_230211",
+    "encap": "results/main_web_firefox-desktop_encap_20261122_230212",
+    "keygen": "results/main_web_firefox-desktop_keygen_20261122_230212",
+    "decap": "results/main_web_firefox-desktop_decap_20261122_230212",
+    "load": "results/main_web_firefox-desktop_load_20261122_230212",
+    "rewrap": "results/main_web_firefox-desktop_rewrap_20261122_230212"
+  },
+  "chrome_android": {
+    "open": "results/main_web_chrome-android_open_20261123_172923",
+    "encap": "results/main_web_chrome-android_encap_20261123_180855",
+    "keygen": "results/main_web_chrome-android_keygen_20261124_222717",
+    "decap": "results/main_web_chrome-android_decap_20261123_225256",
+    "load": "results/main_web_chrome-android_load_20261124_063002",
+    "rewrap": "results/main_web_chrome-android_rewrap_20261124_065828",
+    "temps": "results/temp_chrome_android_main.csv"
+  }
+}

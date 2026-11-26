@@ -1,0 +1,10 @@
+date_utc=2026-11-24T09:50:15Z
+host=PORTATILCLASES
+uname=MINGW64_NT-10.0-26300 PORTATILCLASES 3.6.12-50c44b7c.x86_64 2026-10-30 16:46 UTC x86_64 Msys
+openssl=OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+gcc=gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+git_commit=87ba5185062832fe55a469305df5b9ea7b06931b
+git_dirty=0
+cpu_pin=2 plan=../data/validation_plan.csv phi=0.8
+power_scheme=GUID de plan de energ¡a: 381b4222-f694-41f0-9685-ff5bb260df2e  (Equilibrado)
+processes_running=288

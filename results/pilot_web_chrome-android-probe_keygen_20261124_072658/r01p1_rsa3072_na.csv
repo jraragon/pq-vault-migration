@@ -1,0 +1,21 @@
+# p15_web bench
+# user_agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Mobile Safari/537.36
+# browser_full_version=Not-A.Brand 99.0.0.0; Google Chrome 157.0.8103.78; Chromium 157.0.8103.78 | platform 16.0.0
+# cross_origin_isolated=true
+# timer_resolution_us=5.000
+# hardware_concurrency=8
+# noble_post_quantum=0.7.1 noble_hashes=2.4.0
+# suite=rsa3072 format=na op=keygen iters=10 warmup=50 nf=7
+# run_id=r01p1_rsa3072_na
+# time_source=performance.now
+run_id,suite,format,op,iter,ns
+r01p1_rsa3072_na,rsa3072,na,keygen,0,115790000
+r01p1_rsa3072_na,rsa3072,na,keygen,1,409835000
+r01p1_rsa3072_na,rsa3072,na,keygen,2,392430000
+r01p1_rsa3072_na,rsa3072,na,keygen,3,363560000
+r01p1_rsa3072_na,rsa3072,na,keygen,4,424515000
+r01p1_rsa3072_na,rsa3072,na,keygen,5,595565000
+r01p1_rsa3072_na,rsa3072,na,keygen,6,222260000
+r01p1_rsa3072_na,rsa3072,na,keygen,7,329750000
+r01p1_rsa3072_na,rsa3072,na,keygen,8,265960000
+r01p1_rsa3072_na,rsa3072,na,keygen,9,423655000

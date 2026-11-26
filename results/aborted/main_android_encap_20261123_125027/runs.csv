@@ -1,0 +1,8 @@
+run_id,start_local
+r00p1_hybrid_seed,2026-11-23T12:50:34
+r00p2_mlkem1024_seed,2026-11-23T12:50:56
+r00p3_mlkem768_seed,2026-11-23T12:51:19
+r00p4_rsa3072_na,2026-11-23T12:51:41
+r00p5_mlkem768_expanded,2026-11-23T12:52:03
+r00p6_mlkem1024_expanded,2026-11-23T12:52:25
+r00p7_hybrid_expanded,2026-11-23T12:52:48
